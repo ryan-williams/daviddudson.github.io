@@ -3,5 +3,4 @@ _site
 node_modules
 package-lock.json
 .idea/
-/assets/
 yarn.lock

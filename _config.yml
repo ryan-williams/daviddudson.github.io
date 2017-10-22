@@ -17,4 +17,10 @@ linkedin:  daviddudson
 google-analytics:
   id: 'UA-42525615-1'
 
-exclude: ['package.json', 'src' , 'node_modules']
+exclude: [
+  'package.json',
+  'package-lock.json',
+  'gulpfile.js',
+  '*.txt',
+  'src',
+  'node_modules']
