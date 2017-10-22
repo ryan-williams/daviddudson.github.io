@@ -1,0 +1,11 @@
+test: >
+This site is a very simple jekyll site.
+
+It's designed to deploy on push.
+The release process is as follows.
+
+1. Push to develop
+2. Travis CI converts the site to static via gulp
+3. Travis pushes result to master
+4. Github builds the jekyll site
+5. Github deploys the jekyll site
