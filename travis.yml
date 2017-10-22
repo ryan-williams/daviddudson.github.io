@@ -1,0 +1,13 @@
+before_script:
+  - npm install -g gulp-cli
+script: gulp deploy
+cache:
+  directories:
+    - "node_modules"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  target_branch: master
+  on:
+    branch: develop

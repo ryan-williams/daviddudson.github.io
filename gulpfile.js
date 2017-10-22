@@ -79,3 +79,4 @@ gulp.task('watch', function() {
 gulp.task('reload', ['js', 'jekyll-rebuild']);
 
 gulp.task('default', ['js', 'sass', 'browser-sync', 'watch']);
+gulp.task('deplo', ['js', 'sass']);
