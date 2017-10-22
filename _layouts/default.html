@@ -3,12 +3,16 @@
   {% include head.html %}
   <body>
       {% include header.html %}
-      <section id="about">
-        {% include about.html %}
-      </section>
-      <section id="projects">
-        {% include projects.html %}
-      </section>
-        {{ content }}
+      {% for section in site.data.sections %}
+          <section id="{{section.link}}">
+              <div class="container">
+                  <div class="user-details">
+                      <h3>{{section.title}}</h3>
+                      {% include {{section.link}}.html %}
+                  </div>
+              </div>
+
+          </section>
+      {% endfor %}
       {% include footer.html %}
   </body>
