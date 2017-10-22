@@ -88,6 +88,8 @@ gulp.task('clean', function () {
     return del([
         'src/**/*',
         'gulpfile.js',
+        '.DS_Store',
+        '.travis.yml',
         'package.json'
     ]);
 });
