@@ -7,6 +7,7 @@ var plumber = require('gulp-plumber');
 var cp = require('child_process');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
+var del = require('del');
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
@@ -74,9 +75,21 @@ gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['js-watch']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
   gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
+  gulp.watch(['_data/*.yml'], ['jekyll-rebuild']);
 });
 
 gulp.task('reload', ['js', 'jekyll-rebuild']);
 
-gulp.task('default', ['js', 'sass', 'browser-sync', 'watch']);
-gulp.task('deploy', ['js', 'sass']);
+gulp.task('build', ['js', 'sass']);
+
+gulp.task('default', ['build', 'browser-sync', 'watch']);
+
+gulp.task('clean', function () {
+    return del([
+        'src/**/*',
+        'gulpfile.js',
+        'package.json'
+    ]);
+});
+
+gulp.task('deploy', ['build', 'clean']);
