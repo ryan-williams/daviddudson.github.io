@@ -1,4 +1,7 @@
 before_script:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y wkhtmltopdf
+  - sudo gem install jekyll-pdf
   - npm install -g gulp-cli
   - npm install
 script: gulp deploy

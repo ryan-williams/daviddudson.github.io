@@ -1,2 +1,7 @@
-<a href = https://github.com/DavidDudson/daviddudson.github.io/tree/develop>source</a>
+<a href = https://github.com/DavidDudson/daviddudson.github.io/tree/develop>Site source</a>
 <p> {{site.data.site.text}} </p>
+<ol>
+    {% for step in site.data.site.steps %}
+        <li>{{step}}</li>
+    {% endfor %}
+</ol>

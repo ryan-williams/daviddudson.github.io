@@ -17,6 +17,14 @@ linkedin:  daviddudson
 google-analytics:
   id: 'UA-42525615-1'
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      pdf: true
+
 exclude: [
   'package.json',
   'package-lock.json',

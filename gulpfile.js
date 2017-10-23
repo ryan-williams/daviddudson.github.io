@@ -8,9 +8,12 @@ var cp = require('child_process');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var del = require('del');
+var html2pdf = require('gulp-html2pdf');
+var rename = require('gulp-rename');
+var sanitize = require('sanitize-filename');
+var dateFormat = require('dateformat');
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
-
 /*
  * Build the Jekyll Site
  * runs a child process in node that runs the jekyll commands
@@ -18,6 +21,18 @@ var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 gulp.task('jekyll-build', function (done) {
 	return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
 		.on('close', done);
+});
+
+/*
+ * Generate pdf of index page
+ */
+gulp.task('pdf', function () {
+	return gulp
+        .src('_site/index.html')
+		.pipe(plumber())
+        .pipe(html2pdf())
+		.pipe(rename(sanitize('DavidDudsonCV.pdf')))
+		.pipe(gulp.dest('_site/assets/pdf/'));
 });
 
 /*
@@ -80,7 +95,7 @@ gulp.task('watch', function() {
 
 gulp.task('reload', ['js', 'jekyll-rebuild']);
 
-gulp.task('build', ['js', 'sass']);
+gulp.task('build', ['js', 'sass', 'jekyll-rebuild']);
 
 gulp.task('default', ['build', 'browser-sync', 'watch']);
 
@@ -94,4 +109,4 @@ gulp.task('clean', function () {
     ]);
 });
 
-gulp.task('deploy', ['build', 'clean']);
+gulp.task('deploy', ['build', 'pdf', 'clean']);
