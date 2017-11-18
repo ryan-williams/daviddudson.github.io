@@ -1,0 +1,103 @@
+current:
+  company: Electric Memory IT (EMIT)
+  contracted_to: Process Systems Enterprise (PSE)
+  details: >
+    There are 3 EMIT employees, all living in Palmerston North, New Zealand.
+    We work for PSE which is based in London. PSE + EMIT have around 29 developers and 200ish employees.
+  product: >
+    I am working on the gPROMS family of integrated modelling environments (IME's),
+    designed for various engineers who design incredibly complex systems.
+    The kernel is written in C++ and Fortran, with the UI written in Java.
+    gPROMS is primarily a procedural/declarative language that is used to run simulations/optimizations etc.
+    Thus the IME's act much like an IDE would for a Software Developer.
+  process:
+    PSE's developement process is rather loose. Specific teams can choose to work in whatever way they see fit,
+    whether that is agile, waterfall or some other idealogy.
+    Code review is mandatory for all code. Unit tests and occasionally Integration tests are used.
+    Some teams also used Acceptence tests. All code changes get verified by the QA team.
+    Releases are anywhere from 6 -> 12 months.
+  primary_languages:
+    - name: Java
+      details: >
+        Almost all of the application is written in Java.
+        It is a 20+ year old swing application with nearly 400,000 lines of java code
+    - name: Scala
+      details: >
+        The newest module of our application is written in Scala.
+        It is effectively an immutable data model representation of our language.
+        I consider myself the most knowledgeable Scala developer in the company.
+  other_languages:
+    - name: Groovy
+      details:
+        Our UI's gradle build system is rather complex and heavily made use of gradles plugin infrastructure.
+        The plugins are written in groovy.
+    - name: Python
+      details:
+        Most of the dev scripts I wrote used python.
+        I used a gitpython frequently to programatically interact with my repository.
+        I was also briefly helping a team using Django to build a performance monitoring website.
+    - name: C++
+      details: >
+        My experience with C++ at EMIT is mostly read only.
+        As part of the NLE it was necessary to port a chunk of C++ to Scala.
+        PSE has ~350,000 lines of C++ manage
+    - name: FORTRAN:
+      details: >
+        Our solvers are written in FORTRAN, there was one bug that my boss guided me to fix,
+        where a 1000 line function was returning in multiple places before jumping into the correct clean up section.
+        It is very interesting using such an archaic procedural language even briefly.
+  major_libraries:
+    - name: ANTLR (2 and 4)
+      details: >
+        One of my main tasks for NLE was porting the mixed Antlr2/C++ codebase to Antlr4/Scala.
+        Due to performance reasons, I implemented custom char/token streams, tokens etc.
+        and basically micromanaged the parser to optimize performance.
+    - name: JGraph
+      details: >
+        JGraph is our flowsheeting library which is overdue for replacement.
+        JGraph discontinued development nearly 10 years ago.
+        The developers working on it write a Javascript library called MxGraph.
+        Being so old, JGraphs internals are shocking to work with, raw types everywhere.
+        It is also rather horrible to extend and manipulate.
+    - name: YFiles 2.x & 3.x
+      details: >
+        YFiles is a modern graphing library much like JGraph.
+        On our flowsheets we require all connections between models to be orthogonal.
+        JGraph was not powerful enough for this, so we use YFiles instead.
+        It would be great to port the rest of our JGraph code to
+        YFiles as it is much easier to work with.
+    - name: Ansible
+      details: >
+        I've built multiple ansible scripts for various uses. One for Gerrit/Zuul,
+        one for a performance monitoring site.
+  minor_libraries:
+    - Swing
+    - Corba
+    - GitPython
+    - Django
+    - Puppet
+  projects:
+    - name: New Language Engine (NLE)
+      details: >
+        The purpose of this project was primarily to remove
+        a large chunk of the remaining CORBA code in our codebase.
+        We wanted to make our parser and data models backend agnostic so that in
+        the future we may be able to port the C++ code from Corba -> Antlr + Scala Native.
+        The use of scala was mostly due to case classes and an very performant collections library.
+        Since scala is an immutable first language it is an ideal choice for a threadsafe data model.
+        Since the project has to be highly performant, every change had to be benchmarked by
+        jmh and analysed via the Yourkit java profiler.
+    - name: Maven -> Gradle Migration
+      details: >
+        Our build system is rather complex, between Corba and Antlr generation steps,
+        multiple jvm languages being used, and multiple repositories.
+        The build was designed to be modular via Gradle plugins.
+    - name: Flowsheet routing
+      details: >
+        Our users were generating models in other applications, with 2000+ models and connections between them.
+        The routing took place on the EDT and thus blocked the user from working while it happened.
+        For user generated projects this could happen of first project load and trigger up to 8 hour GUI freezes.
+        Of course this is not acceptable, so using a combination of CompletableFutures and a custom task pool.
+        Routing was moved off the EDT. The largest problem was undo. We had asynchronous edits that had
+        to be managed within Swings very synchronous undo system.
+
