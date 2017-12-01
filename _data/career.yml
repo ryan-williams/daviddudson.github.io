@@ -1,6 +1,7 @@
 current:
   company: Electric Memory IT (EMIT)
   contracted_to: Process Systems Enterprise (PSE)
+  time: ~2 years
   details: >
     There are 3 EMIT employees, all living in Palmerston North, New Zealand.
     We work for PSE which is based in London. PSE + EMIT have around 29 developers and 200ish employees.
@@ -41,7 +42,7 @@ current:
         My experience with C++ at EMIT is mostly read only.
         As part of the NLE it was necessary to port a chunk of C++ to Scala.
         PSE has ~350,000 lines of C++ manage
-    - name: FORTRAN:
+    - name: FORTRAN
       details: >
         Our solvers are written in FORTRAN, there was one bug that my boss guided me to fix,
         where a 1000 line function was returning in multiple places before jumping into the correct clean up section.
@@ -92,12 +93,23 @@ current:
         Our build system is rather complex, between Corba and Antlr generation steps,
         multiple jvm languages being used, and multiple repositories.
         The build was designed to be modular via Gradle plugins.
+        Composite builds are also active so we can test and develop our
+        core platform with any of our various products.
     - name: Flowsheet routing
       details: >
         Our users were generating models in other applications, with 2000+ models and connections between them.
         The routing took place on the EDT and thus blocked the user from working while it happened.
         For user generated projects this could happen of first project load and trigger up to 8 hour GUI freezes.
-        Of course this is not acceptable, so using a combination of CompletableFutures and a custom task pool.
+        Of course this is not acceptable, so using a combination of CompletableFutures and a custom thread pool.
         Routing was moved off the EDT. The largest problem was undo. We had asynchronous edits that had
         to be managed within Swings very synchronous undo system.
-
+past:
+  - name: Dick Smith Electronics
+    role: Salesman
+    time: 1 year
+  - name: Countdown Supermarkets
+    role: Butchers Assistant/Checkout operator
+    time: 5 years
+  - name: Paradise Valley Berry Farm
+    role: Raspberry harvester
+    time: 1 summer

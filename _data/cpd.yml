@@ -1,28 +1,35 @@
 conferences:
-  details: >
+  info: >
     I try to attend as many conferences as I can.
     It's always interesting to see what the community is up to.
-  - name: Kiwi Pycon
-    category: Python
-    times: 2
-    details: >
-      It is regarded as one of the most social conferences and has one of the best communities.
-      I have attended Kiwi Pycon in Dunedin and Christchurch.
-      I gave a lightning talk on GitPython scripting in Dunedin.
-  - name: Kiwicon
-    category: Information Security
-    times: 1
-    details: >
-      Kiwicon X was an amazing conference to go to.
-      It is a huge conference about everything from
-      physical security, hacking, damage reduction etc.
-  - name: NZJS con
-    category: Javascript
-    times: 1
-    details: >
-      I went to NZJS con hoping someone would talk about Web ASM.
-      Although I ended up being drawn in by GraphQL and hybrid
-      single page/server rendered apps.
+  events:
+    - name: Kiwi Pycon
+      category: Python
+      times: 2
+      details: >
+        It is regarded as one of the most social conferences and has one of the best communities.
+        I have attended Kiwi Pycon in Dunedin and Christchurch.
+        I gave a lightning talk on GitPython scripting in Dunedin.
+    - name: Kiwicon
+      category: Information Security
+      times: 1
+      details: >
+        Kiwicon X was an amazing conference to go to.
+        It is a huge conference about everything from
+        physical security, hacking, damage reduction etc.
+    - name: New Zealand Javascript conference (NZJScon)
+      category: Javascript
+      times: 1
+      details: >
+        I went to NZJS con hoping someone would talk about Web ASM.
+        Although I ended up being drawn in by GraphQL and hybrid
+        single page/server rendered apps.
+    - name: Linux Conference Australia (LCA)
+      category: Linux
+      times: 0
+      details: >
+        I will be attending LCA 2018 in January.
+        I value OSS and Linux highly so it will be great to attend.
 community:
   - group: Palmerston North Software Developement meetup group.
     events:
