@@ -1,9 +1,9 @@
-/* sweetScroll load */
+import SweetScroll from 'sweet-scroll';
+
 document.addEventListener("DOMContentLoaded", function () {
   const sweetScroll = new SweetScroll({/* some options */});
 
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS('particles-js', {
+  particlesJS.load('particles-js', {
     "particles": {
       "number": {
         "value": 30,

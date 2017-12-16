@@ -55,18 +55,25 @@ body {
 }
 
 #particles-js {
-  background: $main;
   display: block;
   vertical-align: bottom;
   width: 100vw;
   min-height: 100vh;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background: $main no-repeat fixed;
   .particles-js-canvas-el {
     width:100vw !important;
     height:100vh !important;
   }
+}
+
+.section {
+  display: block;
+  vertical-align: bottom;
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background: no-repeat fixed;
 }
 
 .content {
@@ -173,6 +180,39 @@ body {
   }
 }
 
+
+.up {
+  color: #FFF;
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  .icon {
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    bottom: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    fill: #fff;
+    -webkit-animation: pulse 1.3s infinite;
+    animation: pulse 1.3s infinite;
+    &:hover {
+      color: $sec;
+    }
+    &:active {
+      color: $sec;
+    }
+  }
+}
+
 .user {
   text-align: center;
   margin: 20px auto;
@@ -256,13 +296,10 @@ body {
   margin-top: 100px;
   text-align: center;
   color: #FFF;
-  .love {
-    color: red;
-  }
   a {
+    color: lightskyblue;
     text-decoration: none;
     margin: 0;
-    color: #FFF;
     &:hover{
       color: $sec;
     }

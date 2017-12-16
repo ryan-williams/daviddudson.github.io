@@ -1,14 +1,18 @@
 - title: About Me
   link: about
-
-- title: Technical
-  link: tech
+  up: head
+  down: cpd
 
 - title: Community
   link: cpd
+  up: about
+  down: tech
 
-- title: Tools
-  link: tools
+- title: Technical
+  link: tech
+  up: cpd
+  down: career
 
 - title: Career
   link: career
+  up: tech

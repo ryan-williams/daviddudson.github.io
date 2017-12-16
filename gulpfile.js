@@ -1,19 +1,19 @@
-var gulp = require('gulp');
-var csso = require('gulp-csso');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var cp = require('child_process');
-var imagemin = require('gulp-imagemin');
-var browserSync = require('browser-sync');
-var del = require('del');
-var html2pdf = require('gulp-html2pdf');
-var rename = require('gulp-rename');
-var sanitize = require('sanitize-filename');
-var dateFormat = require('dateformat');
+const gulp = require('gulp');
+const csso = require('gulp-csso');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const sass = require('gulp-sass');
+const plumber = require('gulp-plumber');
+const cp = require('child_process');
+const imagemin = require('gulp-imagemin');
+const browserSync = require('browser-sync');
+const del = require('del');
+const html2pdf = require('gulp-html2pdf');
+const rename = require('gulp-rename');
+const sanitize = require('sanitize-filename');
+const babel = require('gulp-babel');
 
-var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
+const jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 /*
  * Build the Jekyll Site
  * runs a child process in node that runs the jekyll commands
@@ -42,6 +42,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 	browserSync.reload();
 });
 
+
 /*
  * Build the jekyll site and launch browser-sync
  */
@@ -68,7 +69,7 @@ gulp.task('sass', function() {
  * Minify images
  */
 gulp.task('imagemin', function() {
-	return gulp.src('src/img/**/*.{jpg,png,gif}')
+	gulp.src('src/img/**/*.{jpg,png,gif}')
 		.pipe(plumber())
 		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
 		.pipe(gulp.dest('assets/img/'));
@@ -78,15 +79,16 @@ gulp.task('imagemin', function() {
  * Compile and minify js
  */
 gulp.task('js', function(){
-	return gulp.src('src/js/**/*.js')
+	gulp.src('src/js/**/*.js')
 		.pipe(plumber())
+        .pipe(babel({ presets: ['env'] }))
 		.pipe(concat('main.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('assets/js/'))
+		.pipe(gulp.dest('assets/js/'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/styles/**/*.scss', ['sass']);
+  gulp.watch('src/styles/**/*.scss', ['sass', 'reload']);
   gulp.watch('src/js/**/*.js', ['js-watch']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
   gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
@@ -95,7 +97,7 @@ gulp.task('watch', function() {
 
 gulp.task('reload', ['js', 'jekyll-rebuild']);
 
-gulp.task('build', ['js', 'sass', 'jekyll-rebuild']);
+gulp.task('build', ['js', 'sass', 'jekyll-build']);
 
 gulp.task('default', ['build', 'browser-sync', 'watch']);
 

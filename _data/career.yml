@@ -26,7 +26,6 @@ current:
       details: >
         The newest module of our application is written in Scala.
         It is effectively an immutable data model representation of our language.
-        I consider myself the most knowledgeable Scala developer in the company.
   other_languages:
     - name: Groovy
       details:
@@ -83,14 +82,14 @@ current:
         The purpose of this project was primarily to remove
         a large chunk of the remaining CORBA code in our codebase.
         We wanted to make our parser and data models backend agnostic so that in
-        the future we may be able to port the C++ code from Corba -> Antlr + Scala Native.
-        The use of scala was mostly due to case classes and an very performant collections library.
+        the future we may be able to port the C++ code from CORBA -> ANTLR + Scala Native.
+        The use of Scala was mostly due to case classes and an very performant collections library.
         Since scala is an immutable first language it is an ideal choice for a threadsafe data model.
-        Since the project has to be highly performant, every change had to be benchmarked by
-        jmh and analysed via the Yourkit java profiler.
+        Since the project has to be highly performant, every was analysed and benchmarked by
+        JMH and Yourkit java profiler.
     - name: Maven -> Gradle Migration
       details: >
-        Our build system is rather complex, between Corba and Antlr generation steps,
+        Our build system is rather complex, between CORBA and ANTLR generation steps,
         multiple jvm languages being used, and multiple repositories.
         The build was designed to be modular via Gradle plugins.
         Composite builds are also active so we can test and develop our
@@ -108,7 +107,7 @@ past:
     role: Salesman
     time: 1 year
   - name: Countdown Supermarkets
-    role: Butchers Assistant/Checkout operator
+    role: Butchers Assistant/Checkout Operator
     time: 5 years
   - name: Paradise Valley Berry Farm
     role: Raspberry harvester

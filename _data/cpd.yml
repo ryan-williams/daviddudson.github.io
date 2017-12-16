@@ -29,15 +29,35 @@ conferences:
       times: 0
       details: >
         I will be attending LCA 2018 in January.
-        I value OSS and Linux highly so it will be great to attend.
+        I value both Libre/OSS and Linux highly so it will be great to attend.
+open_source:
+  - name: scalagen
+    relationship: Author
+    link: https://github.com/scalameta/scalgen
+    details: >
+      scalagen is a new library + build tool plugin for enabling typesafe code generation.
+      The plan is to replace most functionality that is avaliable via Macro Annotations in scala.
+      Macro annotations have a huge problem in that they are compiler plugins, thus not very portable.
+  - name: scalameta
+    relationship: Maintainer
+    link: https://github.com/scalameta/scalgen
+    details: >
+      scalameta is effectively a library surrounding metaprogramming exclusively with the scala language.
+      It enables everything from code generation, to editing, to retrieving fully qualified names etc.
+      Recently there has been a push to create a Language Server Protocol (LSP) implementation in scalameta.
+      The idea behind scalameta is to be a central library for all scala related tooling to be based off.
 community:
+  - group: IT Professionals New Zealand (ITPNZ)
+    events:
+      - name: A project rots from the head talk
+        details: >
+          It was the inaugural meeting for the new Palmerston North based branch of ITPNZ
   - group: Palmerston North Software Developement meetup group.
     events:
-      - name: Lunch
+      - name: Lunch & Pub meets.
         details: >
           Every so often the group have lunch together.
-          This is a great way to network and
-          learn about the interesting work others in the community are doing.
+          This is a great way to network and learn about the interesting work others in the community are doing.
       - name: Videos
         details: >
           Around once a month the group have a video night.
@@ -46,7 +66,7 @@ community:
         details: >
           Occasionally a member of the group will give a presentation.
           I have been to the ones of interest. Unfortunately I could not attend Jonathan Giles talk. (Oracle Employee).
-          I have also given a talk on Scala at these events
+          I have also given a talk on Scala at these events.
       - name: Workshops
         details: >
-          I gave a Scala workshop at
+          I gave a Scala workshop following my talk, teaching the basics of scala development.

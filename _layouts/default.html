@@ -4,14 +4,21 @@
   <body>
       {% include header.html %}
       {% for section in site.data.sections %}
-          <section id="{{section.link}}">
+          <section id="{{section.link}}" class="section">
+              <a class="up" href="#{{section.up}}" data-scroll>
+                  <i class="icon fa fa-chevron-up" aria-hidden="true" ></i>
+              </a>
               <div class="container">
                   <div class="user-details">
                       <h3>{{section.title}}</h3>
                       {% include {{section.link}}.html %}
                   </div>
               </div>
+              <a class="down" href="#{{section.down}}" data-scroll>
+                  <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+              </a>
           </section>
       {% endfor %}
       {% include footer.html %}
   </body>
+</html>
