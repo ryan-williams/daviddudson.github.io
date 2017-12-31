@@ -19,7 +19,7 @@ const jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
  * runs a child process in node that runs the jekyll commands
  */
 gulp.task('jekyll-build', function (done) {
-	return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
+	return cp.spawn(jekyllCommand, ['build', 'pdf'], {stdio: 'inherit'})
 		.on('close', done);
 });
 
@@ -32,7 +32,7 @@ gulp.task('pdf', function () {
 		.pipe(plumber())
         .pipe(html2pdf())
 		.pipe(rename(sanitize('DavidDudsonCV.pdf')))
-		.pipe(gulp.dest('_site/assets/pdf/'));
+		.pipe(gulp.dest('assets/pdf/'));
 });
 
 /*
@@ -89,15 +89,15 @@ gulp.task('js', function(){
 
 gulp.task('watch', function() {
   gulp.watch('src/styles/**/*.scss', ['sass', 'reload']);
-  gulp.watch('src/js/**/*.js', ['js-watch']);
+  gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
   gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
   gulp.watch(['_data/*.yml'], ['jekyll-rebuild']);
 });
 
-gulp.task('reload', ['js', 'jekyll-rebuild']);
+gulp.task('reload', ['js', 'pdf', 'jekyll-rebuild']);
 
-gulp.task('build', ['js', 'sass', 'jekyll-build']);
+gulp.task('build', [ 'js', 'sass', 'jekyll-build']);
 
 gulp.task('default', ['build', 'browser-sync', 'watch']);
 

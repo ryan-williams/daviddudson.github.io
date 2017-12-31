@@ -1,25 +1,64 @@
+os:
+  name: Linux
+  details: >
+    I prefer Unix based systems for general developement. I would use OSX if necessary also
+  distros:
+    - name: NixOS
+      details: >
+        I've recently started using NixOS, it has the complexity of Arch so it takes a while to setup.
+        However, once setup it is amazing, being able to have multiple versions of the same OS without bloat is great.
+        I've had to rollback a few times too, its completely painless.
+    - name: Ubuntu (Gnome)
+      details: >
+        Ubuntu is my "old faithful" os. When I want a bit more stability I use ubuntu.
+        Although I still tend to stick with nightly releases. I really like Gnome and use it on NixOS and ubuntu.
+        Unfortunately there's too much bloat in Gnome these days, it may cause me to switch.
+    - name: Centos
+      details: >
+        At PSE we target RHEL, thus Centos is a prime candidate when testing.
+        All of the infrastructure is setup for Centos,
+        thus setting up a development on any OS other then Windows or Centos becomes a bit of a mission.
+
 version_control:
- - Git
+  name: Git
+  details: >
+    I prefer a git-flow based, rebase -no-ff merge strategy. This keeps a linear history.
+    I've written plenty of internal tooling/scripts dealing with Git.
 
 ide:
- - Intellij
- - Pycharm
- - Webstorm
- - etc.
+ - name: Intellij IDEA
+   details: >
+    I use Intellij everyday for most development.
+    For Java specifically I struggle to see a reason to use anything else.
+    I do feel Intellij IDEA is too bloated most of the time however,
+    I hope Language Server + Text Editors become a more viable option in the future.
+ - name: Pycharm
+   details: >
+       Go to for Python dev, I try to split languages into different applications to reduce plugin bloat
+ - name: Webstorm
+   details: >
+       Go to for Web dev, although I do not feel an IDE is anywhere near as useful for web dev as it is for Java dev,
+       I occasionally use a text editor instead.
 
-profiler:
- - Yourkit
- - VisualVM
+profilers:
+ - name: Yourkit
+   details: >
+    I would recommend Yourkit to anyone, Yourkit makes optimizing code a breeze.
+ - name: VisualVM
+   details: >
+    I stopped using VisualVM after we purchased Yourkit. Yourkit really is far superior here.
 
-build_tool:
- - Maven
+editors:
+ - Atom
+ - Visual Studio Code
+ - gedit
+ - Vim
+
+build_tools:
  - Gradle
  - SBT
+ - Maven
  - NPM
  - Gulp
  - Webpack
 
-editor:
- - Atom
- - gedit
- - vim (when I have to)

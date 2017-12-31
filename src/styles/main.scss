@@ -1,5 +1,6 @@
 $main: #1a222c;
 $sec: #4B5664;
+$section: #bfc5c8;
 $purple: #54516A;
 $cut: 768px;
 
@@ -74,6 +75,12 @@ body {
   min-height: 100vh;
   background-size: cover;
   background: no-repeat fixed;
+  .up.icon {
+    background-color: $main;
+  }
+  .down.icon {
+    background-color: $main;
+  }
 }
 
 .content {

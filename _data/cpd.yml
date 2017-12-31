@@ -32,14 +32,14 @@ conferences:
         I value both Libre/OSS and Linux highly so it will be great to attend.
 open_source:
   - name: scalagen
-    relationship: Author
+    involvement: Author
     link: https://github.com/scalameta/scalgen
     details: >
       scalagen is a new library + build tool plugin for enabling typesafe code generation.
-      The plan is to replace most functionality that is avaliable via Macro Annotations in scala.
+      The plan is to replace most functionality that is available via Macro Annotations in scala.
       Macro annotations have a huge problem in that they are compiler plugins, thus not very portable.
   - name: scalameta
-    relationship: Maintainer
+    involvement: Maintainer
     link: https://github.com/scalameta/scalgen
     details: >
       scalameta is effectively a library surrounding metaprogramming exclusively with the scala language.

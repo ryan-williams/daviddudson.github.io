@@ -2,7 +2,7 @@
 title: David Dudson
 description: A blog and cv site
 baseurl: ""
-url: "daviddudson@github.io"
+url: daviddudson@github.io
 
 # User settings
 username: David Dudson
@@ -14,6 +14,7 @@ github_username:  daviddudson
 gplus_username:  bigdavenz
 linkedin:  daviddudson
 src: https://github.com/DavidDudson/daviddudson.github.io/tree/develop
+pdf: /assets/pdf/DavidDudsonCV.pdf
 
 google-analytics:
   id: 'UA-42525615-1'

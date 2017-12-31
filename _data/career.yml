@@ -11,13 +11,13 @@ current:
     The kernel is written in C++ and Fortran, with the UI written in Java.
     gPROMS is primarily a procedural/declarative language that is used to run simulations/optimizations etc.
     Thus the IME's act much like an IDE would for a Software Developer.
-  process:
+  process: >
     PSE's developement process is rather loose. Specific teams can choose to work in whatever way they see fit,
     whether that is agile, waterfall or some other idealogy.
-    Code review is mandatory for all code. Unit tests and occasionally Integration tests are used.
-    Some teams also used Acceptence tests. All code changes get verified by the QA team.
+    Code review is mandatory for all code. Unit tests and occasionally integration tests are used.
+    Some teams also used acceptence tests. All code changes get verified by the QA team.
     Releases are anywhere from 6 -> 12 months.
-  primary_languages:
+  languages:
     - name: Java
       details: >
         Almost all of the application is written in Java.
@@ -26,7 +26,6 @@ current:
       details: >
         The newest module of our application is written in Scala.
         It is effectively an immutable data model representation of our language.
-  other_languages:
     - name: Groovy
       details:
         Our UI's gradle build system is rather complex and heavily made use of gradles plugin infrastructure.
@@ -68,7 +67,7 @@ current:
         YFiles as it is much easier to work with.
     - name: Ansible
       details: >
-        I've built multiple ansible scripts for various uses. One for Gerrit/Zuul,
+        I've built multiple Ansible scripts for various uses. One for Gerrit/Zuul,
         one for a performance monitoring site.
   minor_libraries:
     - Swing
@@ -112,3 +111,17 @@ past:
   - name: Paradise Valley Berry Farm
     role: Raspberry harvester
     time: 1 summer
+education:
+  - name: Massey University
+    qualification: Bachelor of Information Science. Computer Science Major
+    status: Compulsories complete, finishing electives via part time study.
+    explanation: Started working fulltime before completion.
+  - name: Western Institute of Technology Taranaki (WITT)
+    qualification: Diploma of Creative Technologies. Animation Major
+    status: Incomplete
+    explanation: Although Animation was interesting, it quickly became tedious. I wanted more of a challenge
+  - name: New Plymouth Boys' High School (NPBHS)
+    qualification: NCEA lvl 3
+    status: Complete
+  - name: Highlands Intermediate
+  - name: Lepperton Primary School

@@ -3,7 +3,7 @@
   up: head
   down: cpd
 
-- title: Community
+- title: Professional Developement and OSS
   link: cpd
   up: about
   down: tech
@@ -16,3 +16,9 @@
 - title: Career
   link: career
   up: tech
+  down: refs
+
+- title: References
+  link: refs
+  up: career
+  down: head
