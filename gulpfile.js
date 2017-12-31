@@ -111,4 +111,4 @@ gulp.task('clean', function () {
     ]);
 });
 
-gulp.task('deploy', ['build', 'pdf', 'clean']);
+gulp.task('deploy', ['build', 'clean']);
