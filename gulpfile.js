@@ -14,6 +14,12 @@ const sanitize = require('sanitize-filename');
 const babel = require('gulp-babel');
 
 const jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
+
+// Don't even bother logging, its not worth the effort with pdf gen.
+const swallowError = function(err) {
+	this.emit('end');
+};
+
 /*
  * Build the Jekyll Site
  * runs a child process in node that runs the jekyll commands
@@ -31,6 +37,7 @@ gulp.task('pdf', function () {
         .src('_site/index.html')
 		.pipe(plumber())
         .pipe(html2pdf())
+        .on('error', swallowError)
 		.pipe(rename(sanitize('DavidDudsonCV.pdf')))
 		.pipe(gulp.dest('assets/pdf/'));
 });
@@ -111,4 +118,4 @@ gulp.task('clean', function () {
     ]);
 });
 
-gulp.task('deploy', ['build', 'clean']);
+gulp.task('deploy', ['build', 'pdf', 'clean']);
