@@ -32,44 +32,45 @@ gulp.task('jekyll-build', function (done) {
 /*
  * Generate pdf of index page
  */
-gulp.task('pdf', function () {
-	return gulp
-        .src('_site/index.html')
+gulp.task('pdf', function (cb) {
+	gulp.src('_site/index.html')
 		.pipe(plumber())
         .pipe(html2pdf())
         .on('error', swallowError)
 		.pipe(rename(sanitize('DavidDudsonCV.pdf')))
 		.pipe(gulp.dest('assets/pdf/'));
+	cb()
 });
 
 /*
  * Rebuild Jekyll & reload browserSync
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function () {
 	browserSync.reload();
-});
+}));
 
 
 /*
  * Build the jekyll site and launch browser-sync
  */
-gulp.task('browser-sync', ['jekyll-build'], function() {
+gulp.task('browser-sync', gulp.series('jekyll-build', function() {
 	browserSync({
 		server: {
 			baseDir: '_site'
 		}
 	});
-});
+}));
 
 /*
 * Compile and minify sass
 */
-gulp.task('sass', function() {
+gulp.task('sass', function(cb) {
   gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(csso())
     .pipe(gulp.dest('assets/css'));
+  cb()
 });
 
 /*
@@ -85,31 +86,33 @@ gulp.task('imagemin', function() {
 /**
  * Compile and minify js
  */
-gulp.task('js', function(){
+gulp.task('js', function(cb) {
 	gulp.src('src/js/**/*.js')
 		.pipe(plumber())
         .pipe(babel({ presets: ['env'] }))
 		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'));
+	cb()
 });
 
-gulp.task('watch', function() {
-  gulp.watch('src/styles/**/*.scss', ['sass', 'reload']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-  gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
-  gulp.watch(['_data/*.yml', '_includes/*.yml', '_config.yml'], ['jekyll-rebuild']);
+gulp.task('watch', function(cb) {
+  gulp.watch('src/styles/**/*.scss', gulp.series('sass', 'reload'));
+  gulp.watch('src/js/**/*.js', gulp.series('js'));
+  gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series('imagemin'));
+  gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], gulp.series('jekyll-rebuild'));
+  gulp.watch(['_data/*.yml', '_includes/*.yml', '_config.yml'], gulp.series('jekyll-rebuild'));
+  cb()
 });
 
-gulp.task('reload', ['js', 'pdf', 'jekyll-rebuild']);
+gulp.task('reload', gulp.series(gulp.parallel('js', 'pdf'), 'jekyll-rebuild'));
 
-gulp.task('build', [ 'js', 'sass', 'jekyll-build']);
+gulp.task('build', gulp.series(gulp.parallel('js', 'sass'), 'jekyll-build'));
 
-gulp.task('default', ['build', 'browser-sync', 'watch']);
+gulp.task('default', gulp.series('build', 'browser-sync', 'watch'));
 
-gulp.task('clean', function () {
-    return del([
+gulp.task('clean', function (cb) {
+    del([
         'src/**/*',
         'assets/**/*',
         '_data/**/*',
@@ -120,6 +123,9 @@ gulp.task('clean', function () {
         '.travis.yml',
         'package.json'
     ]);
+    cb()
 });
 
-gulp.task('deploy', gulp.series('build', 'clean'));
+const deploy = gulp.series('build', 'clean');
+
+gulp.task('deploy', deploy);
