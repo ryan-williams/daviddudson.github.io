@@ -111,6 +111,10 @@ gulp.task('default', ['build', 'browser-sync', 'watch']);
 gulp.task('clean', function () {
     return del([
         'src/**/*',
+        'assets/**/*',
+        '_data/**/*',
+        '_includes/**/*',
+        '_layouts/**/*',
         'gulpfile.js',
         '.DS_Store',
         '.travis.yml',
@@ -118,4 +122,4 @@ gulp.task('clean', function () {
     ]);
 });
 
-gulp.task('deploy', ['build', 'pdf', 'clean']);
+gulp.task('deploy', gulp.series('build', 'clean'));
