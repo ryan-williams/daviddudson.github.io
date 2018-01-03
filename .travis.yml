@@ -2,6 +2,7 @@ before_script:
   - sudo apt-get -qq update
   - sudo apt-get install -y wkhtmltopdf
   - npm install -g gulp-cli
+  - gem install jekyll
   - npm install
 script: gulp deploy
 cache:
