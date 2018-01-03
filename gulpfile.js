@@ -105,6 +105,12 @@ gulp.task('watch', function(cb) {
   cb()
 });
 
+gulp.task('cpToSrc', function(cb) {
+    gulp.src('_site/**/*', {base: './_site'})
+        .pipe(gulp.dest('./'));
+    cb()
+});
+
 gulp.task('reload', gulp.series(gulp.parallel('js', 'pdf'), 'jekyll-rebuild'));
 
 gulp.task('build', gulp.series(gulp.parallel('js', 'sass'), 'jekyll-build'));
@@ -119,6 +125,7 @@ gulp.task('clean', function (cb) {
         '_includes/**/*',
         '_layouts/**/*',
         'gulpfile.js',
+        'index.html',
         '.DS_Store',
         '.travis.yml',
         'package.json'
@@ -126,6 +133,6 @@ gulp.task('clean', function (cb) {
     cb()
 });
 
-const deploy = gulp.series('build', 'clean');
+const deploy = gulp.series('build', 'clean', 'cpToSrc');
 
 gulp.task('deploy', deploy);

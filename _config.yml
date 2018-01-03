@@ -2,7 +2,6 @@
 title: David Dudson
 description: A blog and cv site
 baseurl: ""
-destination: "./_site"
 url: daviddudson@github.io
 
 # User settings
