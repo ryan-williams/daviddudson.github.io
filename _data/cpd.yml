@@ -38,11 +38,12 @@ open_source:
       scalagen is a new library + build tool plugin for enabling typesafe code generation.
       The plan is to replace most functionality that is available via Macro Annotations in scala.
       Macro annotations have a huge problem in that they are compiler plugins, thus not very portable.
+      There's also issues with typed/untyped trees and compiler desugarings
   - name: scalameta
     involvement: Maintainer
     link: https://github.com/scalameta/scalgen
     details: >
-      scalameta is effectively a library surrounding metaprogramming exclusively with the scala language.
+      scalameta is effectively a library surrounding meta-programming exclusively with the scala language.
       It enables everything from code generation, to editing, to retrieving fully qualified names etc.
       Recently there has been a push to create a Language Server Protocol (LSP) implementation in scalameta.
       The idea behind scalameta is to be a central library for all scala related tooling to be based off.

@@ -99,7 +99,7 @@ gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
   gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
-  gulp.watch(['_data/*.yml'], ['jekyll-rebuild']);
+  gulp.watch(['_data/*.yml', '_includes/*.yml', '_config.yml'], ['jekyll-rebuild']);
 });
 
 gulp.task('reload', ['js', 'pdf', 'jekyll-rebuild']);
