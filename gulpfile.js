@@ -32,14 +32,13 @@ gulp.task('jekyll-build', function (done) {
 /*
  * Generate pdf of index page
  */
-gulp.task('pdf', function (cb) {
-	gulp.src('_site/index.html')
+gulp.task('pdf', function () {
+	return gulp.src('_site/index.html')
 		.pipe(plumber())
         .pipe(html2pdf())
         .on('error', swallowError)
 		.pipe(rename(sanitize('DavidDudsonCV.pdf')))
 		.pipe(gulp.dest('assets/pdf/'));
-	cb()
 });
 
 /*
@@ -64,20 +63,19 @@ gulp.task('browser-sync', gulp.series('jekyll-build', function() {
 /*
 * Compile and minify sass
 */
-gulp.task('sass', function(cb) {
-  gulp.src('src/styles/**/*.scss')
+gulp.task('sass', function() {
+  return gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(csso())
     .pipe(gulp.dest('assets/css'));
-  cb()
 });
 
 /*
  * Minify images
  */
 gulp.task('imagemin', function() {
-	gulp.src('src/img/**/*.{jpg,png,gif}')
+	return gulp.src('src/img/**/*.{jpg,png,gif}')
 		.pipe(plumber())
 		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
 		.pipe(gulp.dest('assets/img/'));
@@ -86,29 +84,47 @@ gulp.task('imagemin', function() {
 /**
  * Compile and minify js
  */
-gulp.task('js', function(cb) {
-	gulp.src('src/js/**/*.js')
+gulp.task('js', function() {
+	return gulp.src('src/js/**/*.js')
 		.pipe(plumber())
         .pipe(babel({ presets: ['env'] }))
 		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'));
-	cb()
 });
 
-gulp.task('watch', function(cb) {
-  gulp.watch('src/styles/**/*.scss', gulp.series('sass', 'reload'));
-  gulp.watch('src/js/**/*.js', gulp.series('js'));
-  gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series('imagemin'));
-  gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], gulp.series('jekyll-rebuild'));
-  gulp.watch(['_data/*.yml', '_includes/*.yml', '_config.yml'], gulp.series('jekyll-rebuild'));
-  cb()
+gulp.task('watch', function() {
+	return gulp.parallel(
+		'watch:styles',
+		'watch:js',
+		'watch:images',
+		'watch:html',
+		'watch:yml')
 });
 
-gulp.task('cpToSrc', function(cb) {
-    gulp.src('_site/**/*', {base: './_site'})
+gulp.task('watch:styles', function() {
+    return gulp.watch('src/styles/**/*.scss').on('all', gulp.series('jekyll-rebuild'));
+});
+
+gulp.task('watch:js', function() {
+    return gulp.watch('src/js/**/*.js').on('all', gulp.series('jekyll-rebuild'))
+});
+
+gulp.task('watch:images', function() {
+    return gulp.watch('src/img/**/*.{jpg,png,gif}').on('all', gulp.series('imagemin'))
+});
+
+gulp.task('watch:html', function() {
+    return gulp.watch(['*html', '_includes/*html', '_layouts/*.html']).on('all', gulp.series('jekyll-rebuild'));
+});
+
+gulp.task('watch:yml', function() {
+    return gulp.watch(['_data/*.yml', '_includes/*.yml', '_config.yml']).on('all', gulp.series('jekyll-rebuild'));
+});
+
+gulp.task('cpToSrc', function() {
+    return gulp.src('_site/**/*', {base: './_site'})
         .pipe(gulp.dest('./'));
-    cb()
 });
 
 gulp.task('reload', gulp.series(gulp.parallel('js', 'pdf'), 'jekyll-rebuild'));

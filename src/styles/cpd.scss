@@ -1,0 +1,70 @@
+@import "colours.scss";
+@import "constants.scss";
+
+.cpd {
+  .events {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    justify-content: space-around;
+    margin: auto;
+
+    .event {
+      dt {
+        font-weight: bold;
+      }
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      height: 100%;
+      flex-grow: 1;
+      padding-left: 2%;
+      padding-right: 2%;
+      justify-content: space-between;
+      margin: 0;
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  .icon {
+    text-align: center;
+    color: $main;
+    padding: 2px;
+    font-size: 5px;
+    transition: all .7s;
+    border-radius: 50%;
+    &:hover {
+      color: #FFF;
+      background: $main;
+    }
+    &:active {
+      color: #FFF;
+      background: $main;
+    }
+    @media only screen and (min-width:$cut) {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+    }
+  }
+
+  .link {
+    color: $sec;
+    display: inline-flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: auto;
+    @media only screen and (min-width:$cut){
+      font-size: 20px;
+    }
+    &:hover {
+      color: $main;
+    }
+    &:active {
+      color: $main;
+    }
+  }
+}

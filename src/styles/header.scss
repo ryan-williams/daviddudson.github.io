@@ -1,0 +1,82 @@
+@import 'colours.scss';
+@import 'constants.scss';
+
+.header {
+  z-index: 1;
+  text-align: center;
+  color:#FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  .site-title {
+    font-size: 50px;
+    display: block;
+    line-height: 1;
+    @media only screen and (min-width:$cut){
+      margin: 0;
+      font-size: 100px;
+    }
+  }
+  .site-description {
+    font-size: 20px;
+    display: block;
+    line-height: 1;
+    margin: 5px 0 10px 0;
+    @media only screen and (min-width:$cut){
+      font-size: 40px;
+    }
+  }
+
+  .link {
+    color: #FFF;
+    display: inline-flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+    @media only screen and (min-width:$cut){
+      font-size: 20px;
+    }
+    &:hover {
+      color: $sec;
+    }
+    &:active {
+      color: $sec;
+    }
+  }
+}
+
+#particles-js {
+  display: block;
+  vertical-align: bottom;
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background: $main no-repeat fixed;
+  .particles-js-canvas-el {
+    width:100vw !important;
+    height:100vh !important;
+  }
+}
+
+.user {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 60px;
+  p {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: $cut) {
+    font-size: 75px;
+  }
+}
+
+.user-details {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px auto;
+}
+

@@ -1,0 +1,33 @@
+@import 'colours.scss';
+@import 'constants.scss';
+
+.icons-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .icon {
+    text-align: center;
+    color: #FFF;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    padding: 10px;
+    margin: 2px;
+    transition: all .7s;
+    border-radius: 50%;
+    &:hover {
+      color: $main;
+      background: #FFF;
+    }
+    &:active {
+      color: $main;
+      background: #FFF;
+    }
+    @media only screen and (min-width:$cut) {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+    }
+  }
+}

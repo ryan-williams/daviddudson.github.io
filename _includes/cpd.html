@@ -1,36 +1,45 @@
-<div>
-    <h3>Conferences</h3>
+<div class="cpd">
+    <div>
+        <h3>Open Source</h3>
 
-    <p>{{site.data.cpd.conferences.info}}</p>
-
-    {% for event in site.data.cpd.conferences.events %}
-    <h5>{{event.name}}</h5>
-    <p><b>Category:</b> {{event.category}}</p>
-    <p><b>Times attended:</b> {{event.times}}</p>
-    <p>{{event.details}}</p>
-    {% endfor %}
-</div>
-<div>
-    <h3>Open Source</h3>
-
-    {% for project in site.data.cpd.conferences.project %}
-    <h5>{{project.name}}</h5>
-    <p><b>{{project.involvement}}</b></p>
-    <p><b>Link:</b> {{project.link}}</p>
-    <p>{{project.details}}</p>
-    {% endfor %}
-
-</div>
-<div>
-    <h3>Community</h3>
-
-    {% for group in site.data.cpd.community %}
-    <h5>{{group.group}}</h5>
-    <dl>
-        {% for event in group.events %}
-        <dt>{{event.name}}</dt>
-        <dd>{{event.details}}</dd>
+        {% for project in site.data.cpd.open_source %}
+        <a class="link" href="{{project.link}}"><i class="icon fa fa-github-alt" aria-hidden="true"></i><h5>&nbsp;&nbsp;{{project.name}}</h5>            </a>
+        <p><b>{{project.involvement}}</b></p>
+        <p>{{project.details}}</p>
         {% endfor %}
-    </dl>
-    {% endfor %}
+    </div>
+    <hr>
+    <div>
+        <h3>Conferences</h3>
+
+        <p>{{site.data.cpd.conferences.info}}</p>
+
+        <div class="events">
+            {% for event in site.data.cpd.conferences.events %}
+            <div class="event">
+                <h5>{{event.name}}</h5>
+                <p><b>Category:</b> {{event.category}}</p>
+                <p><b>Times attended:</b> {{event.times}}</p>
+                <p>{{event.details}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+    <div>
+        <h3>Community</h3>
+
+        {% for group in site.data.cpd.community %}
+        <h5>{{group.group}}</h5>
+        <dl class="events">
+            {% for event in group.events %}
+            <div class="event">
+                <dt>{{event.name}}</dt>
+                <dd>{{event.details}}</dd>
+            </div>
+            {% endfor %}
+        </dl>
+        <br>
+        {% endfor %}
+    </div>
 </div>
