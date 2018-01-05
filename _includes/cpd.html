@@ -3,7 +3,7 @@
         <h3>Open Source</h3>
 
         {% for project in site.data.cpd.open_source %}
-        <a class="link" href="{{project.link}}"><i class="icon fa fa-github-alt" aria-hidden="true"></i><h5>&nbsp;&nbsp;{{project.name}}</h5>            </a>
+        <a class="link" href="{{project.link}}"><h5><i class="icon fa fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;{{project.name}}</h5>            </a>
         <p><b>{{project.involvement}}</b></p>
         <p>{{project.details}}</p>
         {% endfor %}
@@ -14,9 +14,9 @@
 
         <p>{{site.data.cpd.conferences.info}}</p>
 
-        <div class="events">
+        <div class="standard_flex">
             {% for event in site.data.cpd.conferences.events %}
-            <div class="event">
+            <div class="standard_flex_item">
                 <h5>{{event.name}}</h5>
                 <p><b>Category:</b> {{event.category}}</p>
                 <p><b>Times attended:</b> {{event.times}}</p>
@@ -31,9 +31,9 @@
 
         {% for group in site.data.cpd.community %}
         <h5>{{group.group}}</h5>
-        <dl class="events">
+        <dl class="standard_flex">
             {% for event in group.events %}
-            <div class="event">
+            <div class="standard_flex_item">
                 <dt>{{event.name}}</dt>
                 <dd>{{event.details}}</dd>
             </div>

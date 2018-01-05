@@ -17,10 +17,40 @@ body {
   vertical-align: bottom;
   background-size: cover;
   background: no-repeat fixed;
-  .up.icon {
-    background-color: $main;
+  text-align: justify;
+
+  h1, h2, h3, h4, h5 {
+    text-align: center;
   }
-  .down.icon {
-    background-color: $main;
+
+  .standard_flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    justify-content: space-around;
+    margin: auto;
+
+    .standard_flex_item {
+      dt {
+        font-weight: bold;
+      }
+      p {
+        text-align: justify;
+      }
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      height: 100%;
+      flex-grow: 1;
+      padding-left: 2%;
+      padding-right: 2%;
+      justify-content: space-between;
+      margin: 10px 0;
+      p, li {
+        text-align: justify;
+      }
+    }
   }
+
 }

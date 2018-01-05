@@ -1,7 +1,7 @@
 os:
-  name: Linux
   details: >
-    I prefer Unix based systems for general developement. I would use OSX if necessary also
+    I prefer Unix based systems for general development.
+    I would however, be happy with Windows for .Net or similar Microsoft specific development.
   distros:
     - name: NixOS
       details: >
@@ -22,23 +22,28 @@ os:
 version_control:
   name: Git
   details: >
-    I prefer a git-flow based, rebase -no-ff merge strategy. This keeps a linear history.
-    I've written plenty of internal tooling/scripts dealing with Git.
+    I prefer a git-flow based, rebase --no-ff merge strategy. This keeps a linear history.
+    I've also written plenty of internal tooling/scripts dealing with Git. primarily with GitPython.
 
-ide:
+ides:
  - name: Intellij IDEA
    details: >
     I use Intellij everyday for most development.
     For Java specifically I struggle to see a reason to use anything else.
     I do feel Intellij IDEA is too bloated most of the time however,
     I hope Language Server + Text Editors become a more viable option in the future.
- - name: Pycharm
-   details: >
-       Go to for Python dev, I try to split languages into different applications to reduce plugin bloat
  - name: Webstorm
    details: >
-       Go to for Web dev, although I do not feel an IDE is anywhere near as useful for web dev as it is for Java dev,
+       Go to for Web development, although I do not feel an IDE is anywhere near as useful for web dev as it is for Java dev,
        I occasionally use a text editor instead.
+ - name: Atom
+   details: >
+       Current goto text editor, although I may switch to Visual Studio Code. It feels bloated to me.
+ - name: Gedit
+   details: >
+       I use Gedit for Git related work. Atom starts too slow and I have
+       not yet spent enough time with Vim to use that.
+
 
 profilers:
  - name: Yourkit
@@ -47,18 +52,3 @@ profilers:
  - name: VisualVM
    details: >
     I stopped using VisualVM after we purchased Yourkit. Yourkit really is far superior here.
-
-editors:
- - Atom
- - Visual Studio Code
- - gedit
- - Vim
-
-build_tools:
- - Gradle
- - SBT
- - Maven
- - NPM
- - Gulp
- - Webpack
-

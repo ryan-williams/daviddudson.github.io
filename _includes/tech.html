@@ -1,38 +1,39 @@
 <div>
     <h5>Operating System</h5>
-    <p>{{site.data.tech.os.name}}</p>
     <p>{{site.data.tech.os.details}}</p>
     <p><b>Distros:</b></p>
-    <dl>
+    <dl class="standard_flex">
     {% for distro in site.data.tech.os.distros%}
-        <dt><b>{{distro.name}}</b></dt>
-    <dd>{{distro.details}}</dd>
+        <div class="standard_flex_item">
+            <dt>{{distro.name}}</dt>
+            <dd>{{distro.details}}</dd>
+        </div>
     {% endfor %}
     </dl>
 
+    <br>
     <h5>Version Control</h5>
     <p><b>{{site.data.tech.version_control.name}}</b></p>
     <p>{{site.data.tech.version_control.details}}</p>
 
-    <h5>IDE</h5>
-    {% for ide in site.data.tech.ide %}
-    <p><b>{{language.name}}</b></p>
-    <p>{{language.details}}</p>
+    <h5>IDE's and Editors</h5>
+    <dl class="standard_flex">
+    {% for ide in site.data.tech.ides %}
+        <div class="standard_flex_item">
+            <dt>{{ide.name}}</dt>
+            <dd>{{ide.details}}</dd>
+        </div>
     {% endfor %}
+    </dl>
 
     <h5>Profilers</h5>
-    {% for prof in site.data.tech.profilers %}
-    <p><b>{{prof.name}}</b></p>
-    <p>{{prof.details}}</p>
-    {% endfor %}
-
-    <h5>Text editors</h5>
-    {% for editor in site.data.tech.editors %}
-    <p>{{editor}}</p>
-    {% endfor %}
-
-    <h5>Build tools</h5>
-    {% for tool in site.data.tech.build_tools %}
-    <p>{{tool}}</p>
-    {% endfor %}
+    <dl class="standard_flex">
+        {% for prof in site.data.tech.profilers %}
+        <div class="standard_flex_item">
+            <dt>{{prof.name}}</dt>
+            <dd>{{prof.details}}</dd>
+        </div>
+        {% endfor %}
+    </dl>
+    <br>
 </div>
