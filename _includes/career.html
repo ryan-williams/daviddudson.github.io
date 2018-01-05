@@ -1,9 +1,7 @@
 <div>
-    <h3>Current:</h3>
-    <h4>Overview:</h4>
-    <p><b>Company: </b>{{site.data.career.current.company}}}</p>
-    <p><b>Contracted To: </b>{{site.data.career.current.contracted_to}}}</p>
-    <p><b>Time Employed: </b>{{site.data.career.current.time}}}</p>
+    <p><b>Company: </b>{{site.data.career.current.company}}</p>
+    <p><b>Contracted To: </b>{{site.data.career.current.contracted_to}}</p>
+    <p><b>Time Employed: </b>{{site.data.career.current.time}}</p>
 
     <br/>
     <p>{{site.data.career.current.details}}</p>
@@ -14,50 +12,67 @@
 
     <h4>Languages:</h4>
 
-    {% for language in site.data.career.current.languages %}
-    <h5>{{language.name}}</h5>
-    <p>{{language.details}}</p>
-    {% endfor %}
+    <div class="standard_flex">
+        {% for language in site.data.career.current.languages %}
+        <div class="standard_flex_item">
+            <h5>{{language.name}}</h5>
+            <p>{{language.details}}</p>
+        </div>
+        {% endfor %}
+    </div>
 
     <h4>Libraries and Frameworks:</h4>
-    {% for lib in site.data.career.current.major_libraries %}
-    <h5>{{lib.name}}</h5>
-    <p>{{lib.details}}</p>
-    {% endfor %}
 
-    <h5>Others</h5>
-    <ul>
-        {% for lib in site.data.career.current.minor_libraries %}
-        <li>{{lib}}</li>
+    <div class="standard_flex">
+        {% for lib in site.data.career.current.major_libraries %}
+        <div class="standard_flex_item">
+            <h5>{{lib.name}}</h5>
+            <p>{{lib.details}}</p>
+        </div>
         {% endfor %}
-    </ul>
-
+    </div>
 
     <h4>Projects:</h4>
-    {% for project in site.data.career.current.projects %}
-    <h5>{{project.name}}</h5>
-    <p>{{project.details}}</p>
-    {% endfor %}
+
+    <div class="standard_flex">
+        {% for project in site.data.career.current.projects %}
+        <div class="standard_flex_item">
+            <h5>{{project.name}}</h5>
+            <p>{{project.details}}</p>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 <div>
     <h3>Past</h3>
 
-    {% for role in site.data.career.past %}
-    <h5>{{role.name}}</h5>
-    <p><b>Role: </b>{{role.role}}}</p>
-    <p><b>Time Employed: </b>{{role.time}}</p>
-    {% endfor %}
+    <div class="standard_flex">
+        {% for role in site.data.career.past %}
+        <div class="standard_flex_item centered">
+            <h5>{{role.name}}</h5>
+            <p><b>Role: </b>{{role.role}}</p>
+            <p><b>Time Employed: </b>{{role.time}}</p>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 <div>
     <h3>Education</h3>
 
+    <div class="standard_flex">
     {% for edu in site.data.career.education %}
-    <h5>{{edu.name}}</h5>
-    {% if edu.qualification %}
-    <p><b>Qualification: </b>{{edu.qualification}}</p>
-    {% endif %}
-    {% if edu.status %}
-    <p><b>Status: </b>{{edu.status}}</p>
-    {% endif %}
+        <div class="standard_flex_item centered">
+            <h5>{{edu.name}}</h5>
+            {% if edu.qualification %}
+            <p><b>Qualification: </b>{{edu.qualification}}</p>
+            {% endif %}
+            {% if edu.status %}
+            <p><b>Status: </b>{{edu.status}}</p>
+            {% endif %}
+            {% if edu.explanation %}
+            <p>{{edu.explanation}}</p>
+            {% endif %}
+        </div>
     {% endfor %}
+    </div>
 </div>

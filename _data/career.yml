@@ -68,13 +68,11 @@ current:
     - name: Ansible
       details: >
         I've built multiple Ansible scripts for various uses. One for Gerrit/Zuul,
-        one for a performance monitoring site.
-  minor_libraries:
-    - Swing
-    - Corba
-    - GitPython
-    - Django
-    - Puppet
+        one for a performance monitoring site. I also experimented with developing
+        in a container via Ansible, having Ansible manage the build
+        environment so development can happen on any device.
+        This could have been extended to allow bisecting our codebase, with a versioned build,
+        to prevent issues going back in time.
   projects:
     - name: New Language Engine (NLE)
       details: >
@@ -114,8 +112,9 @@ past:
 education:
   - name: Massey University
     qualification: Bachelor of Information Science. Computer Science Major
-    status: Compulsories complete, finishing electives via part time study.
-    explanation: Started working fulltime before completion.
+    status: Compulsories complete.
+    explanation: Started working fulltime before completion currently
+     finishing electives via part time study.
   - name: Western Institute of Technology Taranaki (WITT)
     qualification: Diploma of Creative Technologies. Animation Major
     status: Incomplete
@@ -123,5 +122,3 @@ education:
   - name: New Plymouth Boys' High School (NPBHS)
     qualification: NCEA lvl 3
     status: Complete
-  - name: Highlands Intermediate
-  - name: Lepperton Primary School

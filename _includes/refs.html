@@ -1,11 +1,15 @@
 <p>{{site.data.references.details}}</p>
 
+<div class="standard_flex">
 {% for person in site.data.references.people %}
-<h5>{{person.name}}</h5>
-<p><b>Relationship:</b> {{person.relationship}}</p>
-<p><b>Location:</b> {{person.location}}</p>
-<p><b>Timezone:</b> {{person.timezone}}</p>
-<p><b>Email:</b> {{person.email}}</p>
-<p><b>Phone:</b> {{person.phone}}</p>
-<p>{{person.details}}</p>
+    <div class="standard_flex_item">
+        <h5>{{person.name}}</h5>
+        <p><b>Relationship:</b> {{person.relationship}}</p>
+        <p><b>Location:</b> {{person.location}}</p>
+        <p><b>Timezone:</b> {{person.timezone}}</p>
+        <p><b>Email:</b> {{person.email}}</p>
+        <p><b>Phone:</b> {{person.phone}}</p>
+        <p>{{person.details}}</p>
+    </div>
 {% endfor %}
+</div>

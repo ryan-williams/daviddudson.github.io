@@ -1,24 +1,14 @@
 - title: About Me
   link: about
-  up: head
-  down: cpd
 
 - title: Professional Developement and OSS
   link: cpd
-  up: about
-  down: tech
-
-- title: Technical
-  link: tech
-  up: cpd
-  down: career
 
 - title: Career
   link: career
-  up: tech
-  down: refs
+
+- title: Technical
+  link: tech
 
 - title: References
   link: refs
-  up: career
-  down: head
