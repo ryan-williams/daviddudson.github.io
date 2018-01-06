@@ -8,17 +8,18 @@ version_control:
     with git and have written a number of internal scripts for it.
 
 ides:
- - name: Intellij IDEA
+ - name: IntelliJ IDEA
    details: >
-    I use Intellij everyday for most development.
-    For Java specifically I struggle to see a reason to use anything else.
+    I use IntelliJ every day for most development.
+    For Java specifically, I struggle to see a reason to use anything else.
  - name: Webstorm
    details: >
-       Go to for Web development, although I do not feel an IDE is anywhere near as useful for web dev as it is for Java dev,
+       Go to for Web development, although I do not feel an IDE is anywhere
+       near as useful for web dev as it is for Java dev,
        I occasionally use a text editor instead.
  - name: Atom
    details: >
-       My usual text editor, I use it quite a bit for web development aswell.
+       My usual text editor, I use it quite a bit for web development as well.
  - name: Gedit
    details: >
        I use Gedit for Git related work. Atom starts too slow and I have

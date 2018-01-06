@@ -21,14 +21,14 @@ current:
     - name: Moving from Maven to Gradle
       details: >
         Our build system is rather complex, we have multiple "code generation" steps,
-        multiple jvm languages being used, extra post-compile tasks (obfuscation and encryption)
+        multiple JVM languages being used, extra post-compile tasks (obfuscation and encryption)
         and multiple repositories. The build was designed to be modular via Gradle plugins.
     - name: Flowsheet Routing
       details: >
         Our users were generating models in other applications, with 2000+ models and connections between them.
         The routing took place on Swings GUI Thread (EDT) and thus blocked the user from working while it happened.
-        For user generated projects this could happen on project load and trigger up to 8 hour GUI freezes.
-        Of course this is not acceptable, I moved all routing off the EDT. The largest problem was undo.
+        For user-generated projects this could happen on project load and trigger up to 8 hour GUI freezes.
+        Of course, this is not acceptable, thus I moved all routing off the EDT. The largest problem was undo.
         We had asynchronous edits that had to be managed within Swings very synchronous and sequential undo system.
 past:
   - name: Dick Smith Electronics
@@ -45,11 +45,11 @@ education:
     qualification: Bachelor of Information Science. Computer Science Major
     status: Compulsories complete.
     explanation: Started working fulltime before completion currently
-     finishing electives via part time study.
+     finishing electives via part-time study.
   - name: Western Institute of Technology Taranaki (WITT)
     qualification: Diploma of Creative Technologies. Animation Major
     status: Incomplete
     explanation: Although Animation was interesting, it quickly became tedious. I wanted more of a challenge
   - name: New Plymouth Boys' High School (NPBHS)
-    qualification: NCEA lvl 3
+    qualification: NCEA level 3
     status: Complete
