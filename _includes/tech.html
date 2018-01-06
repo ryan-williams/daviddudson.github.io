@@ -1,19 +1,8 @@
 <div>
     <h5>Operating System</h5>
     <p>{{site.data.tech.os.details}}</p>
-    <p><b>Distros:</b></p>
-    <dl class="standard_flex">
-    {% for distro in site.data.tech.os.distros%}
-        <div class="standard_flex_item">
-            <dt>{{distro.name}}</dt>
-            <dd>{{distro.details}}</dd>
-        </div>
-    {% endfor %}
-    </dl>
 
-    <br>
     <h5>Version Control</h5>
-    <p><b>{{site.data.tech.version_control.name}}</b></p>
     <p>{{site.data.tech.version_control.details}}</p>
 
     <h5>IDE's and Editors</h5>

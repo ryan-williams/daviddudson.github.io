@@ -35,9 +35,6 @@ body {
       dt {
         font-weight: bold;
       }
-      p {
-        text-align: justify;
-      }
       display: flex;
       flex-direction: column;
       width: 350px;
@@ -47,14 +44,16 @@ body {
       padding-right: 2%;
       justify-content: space-between;
       margin: 10px 0;
-      p, li {
-        text-align: justify;
-      }
     }
 
     .centered {
-      text-align: center;
+       p, li {
+         text-align: center;
+       }
     }
   }
+}
 
+p, li {
+  text-align: justify;
 }

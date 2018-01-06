@@ -8,7 +8,7 @@ conferences:
 open_source:
   info: >
     I have a passion for writing code, especially when it is consumed by a large number of users.
-    I'm always looking for more ways to help out the open source community
+    I'm always looking for more ways to help out the open source community. 
   projects:
     - name: scalagen
       involvement: Author
@@ -19,17 +19,17 @@ open_source:
       involvement: Maintainer
       link: https://github.com/scalameta/scalameta for Scala, built on scalameta
       details: >
-        Meta-programming library for Scala
+        Meta-programming library for Scala.
     - name: scalameta paradise
       involvement: Maintainer
       link: https://github.com/scalameta/paradise
       details: >
-        Macro library for scala
+        Macro library for scala.
     - name: Elysium
       involvement: Author
       link: https://github.com/DavidDudson/Elysium
       details: >
-        A collection of macros for scalameta/paradise, will be ported to scalagen soon.
+        A collection of macros for scalameta/paradise.
 community:
   info:
     I attend as many talks and events as possible, via Massey University,

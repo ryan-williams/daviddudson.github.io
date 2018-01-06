@@ -3,34 +3,8 @@
     <p><b>Contracted To: </b>{{site.data.career.current.contracted_to}}</p>
     <p><b>Time Employed: </b>{{site.data.career.current.time}}</p>
 
-    <br/>
     <p>{{site.data.career.current.details}}</p>
-    <br/>
     <p>{{site.data.career.current.product}}</p>
-    <br/>
-    <p>{{site.data.career.current.process}}</p>
-
-    <h4>Languages:</h4>
-
-    <div class="standard_flex">
-        {% for language in site.data.career.current.languages %}
-        <div class="standard_flex_item">
-            <h5>{{language.name}}</h5>
-            <p>{{language.details}}</p>
-        </div>
-        {% endfor %}
-    </div>
-
-    <h4>Libraries and Frameworks:</h4>
-
-    <div class="standard_flex">
-        {% for lib in site.data.career.current.major_libraries %}
-        <div class="standard_flex_item">
-            <h5>{{lib.name}}</h5>
-            <p>{{lib.details}}</p>
-        </div>
-        {% endfor %}
-    </div>
 
     <h4>Projects:</h4>
 
@@ -48,7 +22,7 @@
 
     <div class="standard_flex">
         {% for role in site.data.career.past %}
-        <div class="standard_flex_item centered">
+        <div class="centered standard_flex_item">
             <h5>{{role.name}}</h5>
             <p><b>Role: </b>{{role.role}}</p>
             <p><b>Time Employed: </b>{{role.time}}</p>
