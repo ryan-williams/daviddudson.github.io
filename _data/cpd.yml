@@ -1,112 +1,39 @@
 conferences:
   info: >
     I try to attend as many conferences as I can.
-    It's always interesting to see what the community is up to.
-  events:
-    - name: Kiwi Pycon
-      category: Python
-      times: 2
-      details: >
-        It is regarded as one of the most social conferences and has one of the best communities.
-        I have attended Kiwi Pycon in Dunedin and Christchurch.
-        I gave a lightning talk on GitPython scripting in Dunedin.
-    - name: Kiwicon
-      category: Information Security
-      times: 1
-      details: >
-        Kiwicon X was an amazing conference to go to.
-        It is a huge conference about everything from
-        physical security, hacking, damage reduction etc.
-    - name: New Zealand Javascript conference (NZJScon)
-      category: Javascript
-      times: 1
-      details: >
-        I went to NZJS con hoping someone would talk about Web ASM.
-        Although I ended up being drawn in by GraphQL and hybrid
-        single page/server rendered apps.
-    - name: Linux Conference Australia (LCA)
-      category: Linux
-      times: 0
-      details: >
-        I will be attending LCA 2018 in January.
-        I value both Libre/OSS and Linux highly so it will be great to attend.
+    I enjoy networking and learning how the industry is evolving.
+    I have been to multiple conferences including Kiwi Pycon, Kiwicon X and NZJSCon.
+    I gave a lightning talk on GitPython at Kiwi Pycon, Dunedin.
+    I will be attending Linux Conf Australia in January 2018.
 open_source:
-  - name: scalagen
-    involvement: Author
-    link: https://github.com/scalameta/scalagen
-    details: >
-      scalagen is a new library + build tool plugin for enabling typesafe code generation.
-      The plan is to replace most functionality that is available via Macro Annotations in scala.
-      Macro annotations have a huge problem in that they are compiler plugins, thus not very portable.
-      There's also issues with typed/untyped trees and compiler desugarings.
-  - name: scalameta
-    involvement: Maintainer
-    link: https://github.com/scalameta/scalameta
-    details: >
-      scalameta is a library allowing parsing and manipulation of scala language trees.
-      The model has been designed with users in mind and is fairly simple to understand.
-      This enables everything from tooling to macros in a way that most developers can use.
-      this pushes tooling away from compiler internals that are largely unnecessary.
-      scalameta also supports multiple "dialects", each dialect is a different version of scala.
-      Thus we can target any scala version, new or old.
-  - name: scalameta paradise
-    involvement: Maintainer
-    link: https://github.com/scalameta/paradise
-    details: >
-      Paradise was going to be the replacement for scalamacros/paradise,
-      which is the dated, experimental macro library for scala. It
-      allows users to manipulate scalameta trees, rather then compiler trees.
-      There were numerous issues, it has now been deprecated in favour of scalagen.
-      And targeted code generators should feel identical to annotation macros,
-      without the burden of maintaining a compiler plugin.
-  - name: multibot
-    involvement: Contributor
-    link: https://github.com/DavidDudson/multibot
-    details: >
-      Multibot is an IRC based chat bot that acts like a repl for people in IRC and Gitter.
-      I replaced the IRC part of multibot with a Faye client for gitter. This allows things such as
-      Multiline output, loading text, reformatting messages etc.
-      This bot was used in the scalameta gitter channel and the plan is to push the work upstream at some point.
-  - name: Elysium
-    involvement: Author
-    link: https://github.com/DavidDudson/Elysium
-    example:
-    details: >
-      Elysium is a collection of annotation macros for scalameta/paradise.
-      It also uses annotation macros to simplify creation of annotation macros.
-      The work here was put on hold when it became clear that scalameta/paradise
-      was going to become deprecated. Once scalagen is up and running
-      it will be fully ported to that library. Read the scaladoc
-      <a href="https://github.com/DavidDudson/Elysium/blob/master/gen/src/main/scala/nz/daved/elysium/gen/MacroAnnotation.scala">
-      here</a> for an example of how simple it can be to write a macro with Elysium.
+  info: >
+    I have a passion for writing code, especially when it is consumed by a large number of users.
+    I'm always looking for more ways to help out the open source community
+  projects:
+    - name: scalagen
+      involvement: Author
+      link: https://github.com/scalameta/scalagen
+      details: >
+        WIP code generation library for Scala.
+    - name: scalameta
+      involvement: Maintainer
+      link: https://github.com/scalameta/scalameta for Scala, built on scalameta
+      details: >
+        Meta-programming library for Scala
+    - name: scalameta paradise
+      involvement: Maintainer
+      link: https://github.com/scalameta/paradise
+      details: >
+        Macro library for scala
+    - name: Elysium
+      involvement: Author
+      link: https://github.com/DavidDudson/Elysium
+      details: >
+        A collection of macros for scalameta/paradise, will be ported to scalagen soon.
 community:
-  - group: IT Professionals New Zealand (ITPNZ)
-    events:
-      - name: The Project Rots From The Head.
-        details: >
-          It was the inaugural meeting for the new Palmerston North based branch of ITPNZ.
-          The talk, given by Colin D. Ellis was bout how project managers and stakeholders
-          can influence the outcome of a project.
-
-          I would have become a member of ITPNZ if I had not planned to move to Australia.
-          I plan to join IT Professionals Australia (ITPA) once I arrive in Australia.
-  - group: Palmerston North Software Developement Meetup Group.
-    events:
-      - name: Lunch & Pub.
-        details: >
-          Every so often the group have lunch together.
-          This is a great way to network and learn about the interesting work others in the community are doing.
-      - name: Videos
-        details: >
-          Around once a month the group have a video night.
-          Usually the video is a conference talk overseas about some fairly generic
-          topic such as UX, ethics, project management etc.
-      - name: Talks
-        details: >
-          Occasionally a member of the group will give a presentation.
-          I have been to the ones of interest. Unfortunately I could not attend Jonathan Giles talk. (Oracle Employee).
-          I have also given a talk on Scala at these events.
-      - name: Workshops
-        details: >
-          I gave a Scala workshop following my talk, teaching the basics of scala development.
-          Around 25 attended and it seemed to go pretty well.
+  info:
+    I attend as many talks and events as possible, via Massey University,
+    IT Professionals of New Zealand (ITPNZ) or
+    the Palmerston North Software Development Meetup Group.
+    I will be joining IT Professionals Australia once I have arrived in Cairns.
+    I have also given a talk and workshop for Scala to around 30 people at the meetup group.
