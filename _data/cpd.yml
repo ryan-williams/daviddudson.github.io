@@ -8,7 +8,7 @@ conferences:
 open_source:
   info: >
     I have a passion for writing code, especially when it is consumed by a large number of users.
-    I'm always looking for more ways to help out the open source community. 
+    I'm always looking for more ways to help out the open source community.
   projects:
     - name: scalagen
       involvement: Author
@@ -35,5 +35,5 @@ community:
     I attend as many talks and events as possible, via Massey University,
     IT Professionals of New Zealand (ITPNZ) or
     the Palmerston North Software Development Meetup Group.
-    I will be joining IT Professionals Australia once I have arrived in Cairns.
+    Once I have arrived in Cairns I will be joining IT Professionals Australia.
     I have also given a talk and workshop for Scala to around 30 people at the meetup group.
