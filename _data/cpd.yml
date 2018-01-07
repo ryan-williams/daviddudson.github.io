@@ -17,14 +17,14 @@ open_source:
         WIP code generation library for Scala.
     - name: scalameta
       involvement: Maintainer
-      link: https://github.com/scalameta/scalameta for Scala, built on scalameta
+      link: https://github.com/scalameta/scalameta
       details: >
         Meta-programming library for Scala.
     - name: scalameta paradise
       involvement: Maintainer
       link: https://github.com/scalameta/paradise
       details: >
-        Macro library for scala.
+        Macro library for Scala.
     - name: Elysium
       involvement: Author
       link: https://github.com/DavidDudson/Elysium

@@ -1,13 +1,11 @@
 details: >
-  Please ask me for contact information of my references.
-  I wish to not make it available publicly for privacy reasons.
-  Also, when contacting my references, please take note of their timezones.
+  Personal phone numbers of references available on request.
 people:
   - name: Duane Griffin
     relationship: Cofounder of Electric Memory IT
     location: Palmerston North, New Zealand
     timezone: New Zealand Standard Time (NZST - UTC+13)
-    email: ???
+    email: duaneg@psenterprise.com
     phone: ???
     details:
       Duane is my current boss. He has worked for PSE for 14+ years.
@@ -17,7 +15,7 @@ people:
     relationship: Cofounder of Electric Memory IT
     location: Hungary
     timezone: Central European Time (CET - UTC+1)
-    email: ???
+    email: lukeu@psenterprise.com
     phone: ???
     details:
         Luke worked for a short time in New Zealand when I first started. He has since moved back to Hungary.
@@ -27,8 +25,8 @@ people:
     relationship: Head of Software Development, Process Systems Enterprise
     location: London, England
     timezone: Greenwich Mean Time (GMT - UTC+0)
-    email: ???
-    phone: ???
+    email: andrewb@psenterprise.com
+    phone: +44 20 8563 0888
     details:
           Andrew is the Head of Software Development. If you wish to know any non-technical information about how I have
           worked with PSE and how well I work remotely, feel free to ask him.
@@ -36,7 +34,6 @@ people:
     relationship: Ex Manager of Dick Smith Palmerston North
     location: Palmerston North, New Zealand
     timezone: New Zealand Standard Time (NZST - UTC+13)
-    email: ???
     phone: ???
     details:
           Steven (Steve) was my boss at Dick Smith before I started working as a Software Developer.

@@ -1,7 +1,7 @@
 current:
   company: Electric Memory IT (EMIT)
   contracted_to: Process Systems Enterprise (PSE)
-  time: ~2 years
+  time: June 2017 - Present
   details: >
     Based in Palmerston North, New Zealand, Contracting out to Process Systems Enterprise,
     which is based in London.
@@ -11,13 +11,15 @@ current:
     The kernel is written in C++ and Fortran, with the UI written in Java.
     gPROMS is primarily a procedural/declarative language that is used to run simulations/optimizations etc.
     Thus the IME's act much like an IDE would for a Software Developer.
+    With large global clients such as Eli Lilly Pharmaceuticals and Shell Petroleum
+    I take the quality of code I produce very seriously.
   projects:
     - name: New Language Engine (NLE)
       details: >
         The purpose of this project was primarily to remove
         a large chunk of the remaining CORBA code in our codebase.
         Using Antlr4 as our parser and lexer, we managed to build a fast,
-        efficient module.
+        efficient language module.
     - name: Moving from Maven to Gradle
       details: >
         Our build system is rather complex, we have multiple "code generation" steps,
@@ -33,23 +35,19 @@ current:
 past:
   - name: Dick Smith Electronics
     role: Salesman
-    time: 1 year
+    time: 2014 - 2015
   - name: Countdown Supermarkets
     role: Butchers Assistant/Checkout Operator
-    time: 5 years
+    time: 2009 - 2013
   - name: Paradise Valley Berry Farm
-    role: Raspberry harvester
-    time: 1 summer
+    role: Raspberry Harvester
+    time: 2008
 education:
   - name: Massey University
     qualification: Bachelor of Information Science. Computer Science Major
-    status: Compulsories complete.
+    status: Compulsories complete in 2015
     explanation: Started working fulltime before completion currently
      finishing electives via part-time study.
-  - name: Western Institute of Technology Taranaki (WITT)
-    qualification: Diploma of Creative Technologies. Animation Major
-    status: Incomplete
-    explanation: Although Animation was interesting, it quickly became tedious. I wanted more of a challenge
   - name: New Plymouth Boys' High School (NPBHS)
     qualification: NCEA level 3
-    status: Complete
+    status: Complete in 2011
