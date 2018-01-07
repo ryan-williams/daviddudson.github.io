@@ -1,11 +1,12 @@
 @import 'colours.scss';
 
 body {
-  p, li {
-    font-size: 11px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    max-width: 768px;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 100%;
+  max-width: 768px;
+  .centered {
+    text-align: center;
   }
 
   h1 {
@@ -27,4 +28,60 @@ body {
   h5 {
     font-size: 12px;
   }
+
+  .header {
+    display: block;
+    text-align: center;
+  }
+
+  .section {
+    display: block;
+    vertical-align: bottom;
+    background-size: cover;
+    background: no-repeat fixed;
+    text-align: justify;
+
+    h1, h2, h3, h4, h5 {
+      text-align: center;
+    }
+
+    .section-link {
+      display: none;
+    }
+
+    .standard_flex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-basis: 20%;
+      justify-content: space-around;
+      margin: auto;
+
+      .standard_flex_item {
+        dt {
+          font-weight: bold;
+        }
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 100%;
+        flex-grow: 1;
+        padding-left: 2%;
+        padding-right: 2%;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .centered {
+    p, li {
+      text-align: center;
+    }
+  }
+
+  p, li {
+    text-align: justify;
+  }
+
 }
