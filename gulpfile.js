@@ -33,7 +33,7 @@ gulp.task('jekyll-build', function (done) {
  * Generate pdf of index page
  */
 gulp.task('pdf', function () {
-	return gulp.src('_site/index.html')
+	return gulp.src('_site/pdf.html')
 		.pipe(plumber())
         .pipe(html2pdf())
         .on('error', swallowError)

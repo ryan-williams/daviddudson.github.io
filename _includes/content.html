@@ -1,0 +1,9 @@
+{% for section in site.data.sections %}
+<section id="{{section.link}}" class="section">
+    <div class="container">
+        <h3>{{section.title}}</h3>
+        {% include {{section.link}}.html %}
+        <hr/>
+    </div>
+</section>
+{% endfor %}
