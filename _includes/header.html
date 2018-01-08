@@ -6,7 +6,9 @@
       </h1>
       {% include contact.html %}
       {% for section in site.data.sections %}
+      {% if section.title %}
       <a class="link section-link" href="#{{section.link}}" data-scroll>{{section.title}}</a>
+      {% endif %}
       {% endfor %}
       <br/>
       <br/>

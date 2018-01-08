@@ -1,14 +1,22 @@
 - title: About Me
   link: about
 
-- title: Professional Development and OSS
-  link: cpd
+- title: Open Source
+  link: opensource
+
+- link: community
+
+- link: conferences
 
 - title: Career
-  link: career
+  link: employer
+
+- link: past_employment
 
 - title: Technical
   link: tech
+
+- link: education
 
 - title: References
   link: refs

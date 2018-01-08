@@ -2,7 +2,9 @@
 {% for section in site.data.sections %}
 <section id="{{section.link}}" class="section">
     <div class="container">
+        {% if section.title %}
         <h3>{{section.title}}</h3>
+        {% endif %}
         {% include {{section.link}}.html %}
         <hr/>
     </div>
