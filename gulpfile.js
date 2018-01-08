@@ -12,6 +12,7 @@ const html2pdf = require('gulp-html2pdf');
 const rename = require('gulp-rename');
 const sanitize = require('sanitize-filename');
 const babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
 
 const jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
@@ -67,6 +68,10 @@ gulp.task('sass', function() {
   return gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(csso())
     .pipe(gulp.dest('assets/css'));
 });
