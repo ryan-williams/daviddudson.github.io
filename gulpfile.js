@@ -67,7 +67,9 @@ gulp.task('browser-sync', gulp.series('jekyll-build', function() {
 gulp.task('sass', function() {
   return gulp.src('src/styles/**/*.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass({
+        includePaths: ['node_modules']
+    }))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false

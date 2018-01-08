@@ -1,5 +1,6 @@
 @import 'colours.scss';
 @import 'constants.scss';
+@import "sass-rem/rem";
 
 .icons-header {
   display: flex;
@@ -9,11 +10,11 @@
   .icon {
     text-align: center;
     color: #FFF;
-    width: 25px;
-    height: 25px;
-    font-size: 15px;
-    padding: 10px;
-    margin: 2px;
+    @include rem(width, 35px);
+    @include rem(height, 35px);
+    @include rem(font-size, 35px);
+    @include rem(padding, 15px);
+    @include rem(margin, 2px);
     transition: all .7s;
     border-radius: 50%;
     &:hover {
@@ -23,11 +24,6 @@
     &:active {
       color: $main;
       background: #FFF;
-    }
-    @media only screen and (min-width:$cut) {
-      width: 35px;
-      height: 35px;
-      font-size: 35px;
     }
   }
 }

@@ -1,14 +1,15 @@
 @import 'colours.scss';
+@import "sass-rem/rem";
 
 .down {
   color: #FFF;
   position: absolute;
-  bottom: 25px;
+  @include rem(bottom, 25px);
   width: 100%;
   margin: 0 auto;
   display: block;
   text-align: center;
-  font-size: 30px;
+  @include rem(font-size, 25px);
   cursor: pointer;
   .icon {
     position: absolute;

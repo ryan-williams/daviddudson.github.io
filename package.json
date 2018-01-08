@@ -29,6 +29,7 @@
     "sanitize-filename": "^1.6.1"
   },
   "dependencies": {
+    "sass-rem": "^2.0.0",
     "sweet-scroll": "^3.0.0"
   }
 }

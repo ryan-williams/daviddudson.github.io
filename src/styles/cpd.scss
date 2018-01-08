@@ -1,11 +1,12 @@
 @import "colours.scss";
 @import "constants.scss";
+@import "sass-rem/rem";
 
 .opensource {
   .icon {
     text-align: center;
     color: $main;
-    padding: 2px;
+    @include rem(padding, 2px);
     transition: all .7s;
     border-radius: 50%;
     &:hover {

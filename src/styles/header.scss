@@ -1,5 +1,6 @@
 @import 'colours.scss';
 @import 'constants.scss';
+@import "sass-rem/rem";
 
 .header {
   z-index: 1;
@@ -9,37 +10,25 @@
   top: 50%;
   left: 50%;
   margin: auto;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   .site-title {
-    font-size: 50px;
+    @include rem(font-size, 100px);
     display: block;
     line-height: 1;
-    @media only screen and (min-width:$cut){
-      margin: 0;
-      font-size: 100px;
-    }
   }
   .site-description {
-    font-size: 20px;
+    @include rem(font-size, 40px);
     display: block;
     line-height: 1;
-    margin: 5px 0 10px 0;
-    @media only screen and (min-width:$cut){
-      font-size: 40px;
-    }
+    @include rem(margin, 5px 0 10px 0);
   }
 
   .link {
-    color: #FFF;
+    color: lighten($main, 80%);
     display: inline-flex;
     justify-content: space-between;
     text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 20px;
-    }
+    @include rem(padding, 10px);
     &:hover {
       color: $sec;
     }
@@ -64,19 +53,16 @@
 
 .user {
   text-align: center;
-  margin: 20px auto;
-  font-size: 60px;
+  @include rem(margin, 20px auto);
+  @include rem(font-size, 60px);
   p {
-    font-size: 16px;
-  }
-  @media only screen and (min-width: $cut) {
-    font-size: 75px;
+    @include rem(font-size, 16px);
   }
 }
 
 .user-details {
   text-align: center;
-  font-size: 16px;
-  margin: 10px auto;
+  @include rem(font-size, 16px);
+  @include rem(margin, 10px auto);
 }
 

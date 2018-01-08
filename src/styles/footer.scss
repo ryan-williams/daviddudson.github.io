@@ -1,9 +1,10 @@
 @import 'colours.scss';
+@import "sass-rem/rem";
 
 .footer {
   background: $main;
-  padding: 10px 0;
-  margin-top: 100px;
+  @include rem(padding, 10px 0);
+  @include rem(margin-top, 100px);
   text-align: center;
   color: #FFF;
   a {
