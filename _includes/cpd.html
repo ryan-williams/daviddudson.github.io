@@ -1,28 +1,7 @@
 <div class="cpd">
-    <div>
-        <h3>Open Source</h3>
-
-        <p>{{site.data.cpd.open_source.info}}</p>
-
-        <div class="standard_flex">
-        {% for project in site.data.cpd.open_source.projects %}
-            <div class="standard_flex_item centered">
-                <a class="link" href="{{project.link}}"><h5><i class="icon fa fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;{{project.name}}</h5>            </a>
-                <p><b>{{project.involvement}}</b></p>
-                <p>{{project.details}}</p>
-            </div>
-        {% endfor %}
-        </div>
-    </div>
+    {% include opensource.html %}
     <hr>
-    <div>
-        <h3>Conferences</h3>
-
-        <p>{{site.data.cpd.conferences.info}}</p>
-    </div>
+    {% include conferences.html %}
     <hr>
-    <div>
-        <h3>Community</h3>
-        <p>{{site.data.cpd.community.info}}</p>
-    </div>
+    {% include community.html %}
 </div>
