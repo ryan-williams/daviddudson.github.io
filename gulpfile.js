@@ -8,7 +8,7 @@ const cp = require('child_process');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync');
 const del = require('del');
-const html2pdf = require('gulp-html2pdf');
+const html2pdf = require('gulp-html-pdf');
 const rename = require('gulp-rename');
 const sanitize = require('sanitize-filename');
 const babel = require('gulp-babel');
@@ -30,14 +30,14 @@ gulp.task('jekyll-build', function (done) {
 		.on('close', done);
 });
 
-/*
- * Generate pdf of index page
- */
 gulp.task('pdf', function () {
 	return gulp.src('_site/pdf.html')
 		.pipe(plumber())
-        .pipe(html2pdf())
-        .on('error', swallowError)
+        .pipe(html2pdf({
+            phantomPath: 'phantomjs',
+            width: "200",
+            height: "282",
+            base: "https://daviddudson.github.io"}))
 		.pipe(rename(sanitize('DavidDudsonCV.pdf')))
 		.pipe(gulp.dest('assets/pdf/'));
 });
@@ -70,10 +70,7 @@ gulp.task('sass', function() {
     .pipe(sass({
         includePaths: ['node_modules']
     }))
-    .pipe(autoprefixer({
-        browsers: ['Chrome 13'],
-        flexbox: true
-    }))
+    .pipe(autoprefixer())
     .pipe(csso())
     .pipe(gulp.dest('assets/css'));
 });
