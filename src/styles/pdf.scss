@@ -61,6 +61,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    display: flex;
+    -webkit-box-pack: center;
 
     .standard_flex_item {
       dt {

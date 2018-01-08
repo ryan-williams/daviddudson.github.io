@@ -26,7 +26,7 @@ const swallowError = function(err) {
  * runs a child process in node that runs the jekyll commands
  */
 gulp.task('jekyll-build', function (done) {
-	return cp.spawn(jekyllCommand, ['build', 'pdf'], {stdio: 'inherit'})
+	return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
 		.on('close', done);
 });
 
@@ -71,8 +71,8 @@ gulp.task('sass', function() {
         includePaths: ['node_modules']
     }))
     .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
+        browsers: ['Chrome 13'],
+        flexbox: true
     }))
     .pipe(csso())
     .pipe(gulp.dest('assets/css'));
