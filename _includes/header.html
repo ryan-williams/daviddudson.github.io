@@ -4,14 +4,18 @@
         <span class="site-title">{{site.username}}</span>
         <span class="site-description">{{site.user_title}}</span>
       </h1>
+      <br/>
       {% include contact.html %}
+      <br/>
       {% for section in site.data.sections %}
       {% if section.title %}
       <a class="link section-link" href="#{{section.link}}" data-scroll>{{section.title}}</a>
       {% endif %}
       {% endfor %}
       <br/>
-      <h4> {{site.data.about.hire}} </h4>
+      <br/>
+      <h5> {{site.data.about.hire}} </h5>
+      <br/>
       <br/>
       <a class=link href="{{site.pdf}}">PDF Version</a>
   </div>
