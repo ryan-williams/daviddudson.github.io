@@ -1,0 +1,13 @@
+<div>
+    <h3>Past</h3>
+
+    <div class="standard_flex">
+        {% for role in site.data.career.past %}
+        <div class="centered standard_flex_item">
+            <h5>{{role.name}}</h5>
+            <p><b>Role: </b>{{role.role}}</p>
+            <p><b>Time Employed: </b>{{role.time}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>

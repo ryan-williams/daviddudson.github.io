@@ -1,0 +1,21 @@
+<div>
+    <p><b>Company: </b>{{site.data.career.current.company}}<br>
+        <b>Contracted To: </b>{{site.data.career.current.contracted_to}}<br>
+        <b>Time Employed: </b>{{site.data.career.current.time}}</p>
+
+    <p>{{site.data.career.current.details}}
+        <br>
+        <br>
+        {{site.data.career.current.product}}</p>
+
+    <h4>Projects:</h4>
+
+    <div class="standard_flex">
+        {% for project in site.data.career.current.projects %}
+        <div class="standard_flex_item">
+            <h5>{{project.name}}</h5>
+            <p>{{project.details}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
