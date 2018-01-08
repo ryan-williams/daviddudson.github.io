@@ -1,12 +1,28 @@
 <br>
-{% for section in site.data.sections %}
-<section id="{{section.link}}" class="section">
-    <div class="container">
-        {% if section.title %}
-        <h3>{{section.title}}</h3>
-        {% endif %}
-        {% include {{section.link}}.html %}
+<section id="{{section.link}}" class="section container">
+    <div class="page">
+        <h3>About me</h3>
+        {% include about.html %}
         <hr/>
+        <h3>Open Source</h3>
+        {% include opensource.html %}
+    </div>
+    <div class="page">
+        <h3>Employment</h3>
+        {% include employer.html %}
+        <hr/>
+        {% include past_employment.html %}
+        <hr/>
+        <h3>Technical</h3>
+        {% include tech.html %}
+        <hr/>
+        {% include conferences.html %}
+        <hr/>
+        {% include community.html %}
+        <hr/>
+        {% include education.html %}
+    </div>
+    <div class="page">
+        {% include refs.html %}
     </div>
 </section>
-{% endfor %}
