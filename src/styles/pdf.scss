@@ -1,49 +1,47 @@
 @import 'colours.scss';
+@import "sass-rem/rem";
+@import "constants.scss";
 
 body {
   font-size: 11px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 100%;
-  max-width: 768px;
-  .centered {
-    text-align: center;
-  }
+  max-width: $cut;
+  text-align: justify;
+  display: block;
 
   h1 {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   h4 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   h5 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .header {
-    display: block;
+    vertical-align: bottom;
+    background-size: cover;
+    background: no-repeat fixed;
     text-align: center;
   }
 
   .section {
-    display: block;
     vertical-align: bottom;
     background-size: cover;
     background: no-repeat fixed;
     text-align: justify;
-  }
-
-  h1, h2, h3, h4, h5 {
-    text-align: center;
   }
 
   .section-link {
@@ -51,19 +49,36 @@ body {
     visibility: hidden;
   }
 
+
+  .opensource {
+    p {
+      text-align: left;
+    }
+  }
+
   .standard_flex {
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     .standard_flex_item {
       dt {
         font-weight: bold;
       }
+
+      min-width: 47%;
+      padding: 5px;
+      margin: auto;
     }
   }
 
-  .centered {
-    p, li {
-      text-align: center;
+  .tech, .education {
+    .standard_flex {
+      display: block !important;
+      .standard_flex_item {
+        margin: 0 !important;
+      }
     }
   }
 
@@ -71,4 +86,20 @@ body {
     text-align: justify;
   }
 
+  .site-title {
+    font-size: 30px;
+    display: block;
+    line-height: 1;
+  }
+
+  .site-description {
+    font-size: 20px;
+    display: block;
+    line-height: 1;
+    margin: 5px 0 10px 0;
+  }
+
+  .footer {
+    visibility: hidden;
+  }
 }

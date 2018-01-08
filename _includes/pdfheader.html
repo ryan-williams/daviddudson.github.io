@@ -1,8 +1,15 @@
 <div class="header" id="head">
     <h1>
-        <span class="pdf-title">{{site.username}}</span>
-        <span class="pdf-description">{{site.user_title}}</span>
+        <span class="site-title">{{site.username}}</span>
+        <span class="site-description">{{site.user_title}}</span>
     </h1>
+    <br/>
+    <a class="link" aria-label="Send email" href="mailto:{{site.email}}">{{site.email}}</a>
+    <br/>
+    <div>
+        {{site.phone}}
+    </div>
+    <br/>
     <h4> {{site.data.about.hire}} </h4>
     <br/>
 </div>
