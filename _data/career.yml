@@ -18,8 +18,8 @@ current:
       details: >
         The purpose of this project was primarily to remove
         a large chunk of the remaining CORBA code in our codebase.
-        Using Antlr4 as our parser and lexer, we managed to build a fast,
-        efficient language module.
+        Using Antlr4 as our parser and lexer, with Scala as the language of choice,
+        we managed to build an fast, immutable, threadsafe and storage efficient language module.
     - name: Moving from Maven to Gradle
       details: >
         Our build system is rather complex, we have multiple "code generation" steps,
