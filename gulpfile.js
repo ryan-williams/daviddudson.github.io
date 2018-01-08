@@ -156,6 +156,12 @@ gulp.task('clean', function (cb) {
     cb()
 });
 
-const deploy = gulp.series('build', 'clean', 'cpToSrc');
+// 1. Jekyll build first to generate the correct html structure in _site.
+// 2. Generate pdf based off pdf.html
+// 3. build assets again (with the new pdf included)
+// 4. clean up unnecessary files and adjust directory structure to that of github pages
+// TODO: We probably do not need to build twice, however it does not affect
+// local build times so it's not major
+const deploy = gulp.series('jekyll-build', 'pdf', 'jekyll-build', 'clean', 'cpToSrc');
 
 gulp.task('deploy', deploy);
