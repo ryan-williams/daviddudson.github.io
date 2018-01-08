@@ -15,16 +15,30 @@
     @include rem(font-size, 100px);
     display: block;
     line-height: 1;
+
+    @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 480px)
+        and (orientation: portrait) {
+      @include rem(font-size, 60px);
+    }
   }
   .site-description {
     @include rem(font-size, 40px);
     display: block;
     line-height: 1;
     @include rem(margin, 5px 0 10px 0);
+
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (orientation: portrait) {
+      @include rem(font-size, 30px);
+    }
   }
 
   .link {
-    color: lighten($main, 80%);
+    color: lighten($main, 60%);
     display: inline-flex;
     justify-content: space-between;
     text-decoration: none;
@@ -35,6 +49,23 @@
     &:active {
       color: $sec;
     }
+
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (orientation: portrait) {
+      @include rem(font-size, 10px);
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (orientation: portrait) {
+    h5 {
+      @include rem(font-size, 20px);
+    }
+    @include rem(font-size, 15px);
   }
 }
 
