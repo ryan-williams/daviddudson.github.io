@@ -1,19 +1,19 @@
 <br>
 <section id="{{section.link}}" class="section container">
     <div class="page">
-        <h3>About me</h3>
+        <h3 id="about">About me</h3>
         {% include about.html %}
         <hr/>
-        <h3>Open Source</h3>
+        <h3 id="opensource">Open Source</h3>
         {% include opensource.html %}
     </div>
     <div class="page">
-        <h3>Employment</h3>
+        <h3 id="employer">Employment</h3>
         {% include employer.html %}
         <hr/>
         {% include past_employment.html %}
         <hr/>
-        <h3>Technical</h3>
+        <h3 id="tech">Technical</h3>
         {% include tech.html %}
         <hr/>
         {% include conferences.html %}
@@ -23,6 +23,7 @@
         {% include education.html %}
     </div>
     <div class="page">
+        <h3 id="refs">References</h3>
         {% include refs.html %}
     </div>
 </section>

@@ -7,11 +7,60 @@ version_control:
     I exclusively use git for version control. I am very competent
     with git and have written a number of internal scripts for it.
 
+libraries:
+  - name: Scala
+    details: >
+      I have been writing Scala code since 2012, working with it in industry for the past 2 years.
+      I consider myself an advanced Scala user and have given talks on Scala before.
+      Most of my open source work has been creating and/or contributing to Scala libraries.
+      I've a large number of Scala libraries, but most commonly Cats, Monix, Circe and Scalameta.
+  - name: Java
+    details: >
+      Java was the first language I learnt. Self taught while I was at high school I have been writing Java code since 2011.
+      A large portion of the codebase I work in is Java and I consider myself an advanced Java user.
+  - name: Python
+    details: >
+      I use Python mostly for scripting and web scraping. I've attended multiple
+      Kiwi Pycons and always enjoyed the friendliness of the Python community.
+  - name: Javascript
+    details: >
+      I've written a lot of javascript, mostly during my time at university,
+      I have experience ES5, ES6, Typescript and Coffeescript.
+      I've also written code in AngularJS, Angular and React,
+      using tools such as NPM, Bower, Gulp and Webkit.
+  - name: Antlr 4
+    details: >
+      A large portion of my work recently has been writing ANTLR4 Grammars,
+      a Scala AST to go with them and ensuring performance has been optimal.
+      Due to this, I've subclassed and replaced large portions of the ANTLR
+      code as it was non-optimal, generating far too much garbage for our uses.
+  - name: Ansible
+    details: >
+      I have written multiple sets of Ansible scripts, for provisioning build machines and setting up dev environments.
+  - name: Gradle
+    details: >
+      Due to being in charge of the Maven => Gradle porting of our build system at work,
+      I have become a competent Gradle/Groovy developer.
+  - name: Category theory
+    details: >
+      Last year I taught myself basic category theory. I wanted to get a ground up understanding of
+      category theory so that when working with the Cats library, I could understand the reasoning and terminology.
+      In particular, I wanted to develop an understanding the Free Monads and Natural Transformations.
+      I still want to do far more research into this field and personally believe it should
+      be part of every Computer Science curriculum globally.
+  - name: Functional Programming
+    details: >
+      I believe that Functional Programming is a far too common of a phrase these days, when a lot of people mean "programming with functions".
+      Functional programming is not just about having functions representable at the type level.
+      I use purely immutable data structures and try to be as pure as possible,
+      handling effects at the type level, where it does not affect Readability, Maintainability or Performance.
+      I can proudly say that I have not deliberately used the keyword "null" in my code, for well over a year.
+
 ides:
  - name: IntelliJ IDEA
    details: >
-    I use IntelliJ every day for most development.
-    For Java specifically, I struggle to see a reason to use anything else.
+        I use IntelliJ every day for most development.
+        For Java specifically, I struggle to see a reason to use anything else.
  - name: Webstorm
    details: >
        Go to for Web development, although I do not feel an IDE is anywhere

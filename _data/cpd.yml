@@ -7,28 +7,35 @@ conferences:
 open_source:
   info: >
     I have a passion for writing code, especially when it is consumed by a large number of users.
-    I'm always looking for more ways to help out the open source community.
+    I'm always looking for more ways to help out the open source community, either on Gitter or via PR's.
+    Ideally I would like to work completely open source
+    and believe that all companies should open source all their libraries where it is appropriate.
   projects:
     - name: scalagen
       involvement: Author
       link: https://github.com/scalameta/scalagen
       details: >
-        WIP code generation library for Scala.
+        WIP code generation library for Scala. Built on scalameta,
+        scalagen supports any scalameta dialect, Scala Native/ScalaJs/Dotty/Scala 2.10 to 2.12.4 are all supported.
+        scalagen can completely replace all scalameta/paradise annotation macros, and *most* scalamacros/paradise annotations.
     - name: scalameta
       involvement: Maintainer
       link: https://github.com/scalameta/scalameta
       details: >
-        Meta-programming library for Scala.
+        Meta-programming library for Scala. Built with the idea that Scala's language tree's should be easy to manipulate.
+        This library is a centerpoint for most recent developements with Scala's tooling.
     - name: scalameta paradise
       involvement: Maintainer
       link: https://github.com/scalameta/paradise
       details: >
-        Macro library for Scala.
+        Macro library for Scala. Now deprecated in favor of scalameta/scalagen (Annotation Macros)
+        and scalacenter/macros (Def Macros)
     - name: Elysium
       involvement: Author
       link: https://github.com/DavidDudson/Elysium
       details: >
-        A collection of macros for scalameta/paradise.
+        A collection of macros for scalameta/paradise. On hold until scalagen goes 0.1,
+        then the entire API will be converted.
 community:
   info:
     I attend as many talks and events as possible, via Massey University,
