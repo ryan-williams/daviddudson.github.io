@@ -1,0 +1,1 @@
+@-webkit-keyframes pulse{0%,to{filter:alpha(opacity=40);opacity:.4;top:0}50%{-webkit-filter:none;filter:none;opacity:1;top:-10px}}@keyframes pulse{0%,to{filter:alpha(opacity=40);opacity:.4;top:0}50%{-webkit-filter:none;filter:none;opacity:1;top:-10px}}

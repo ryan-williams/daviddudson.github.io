@@ -1,0 +1,9 @@
+_site
+.sass-cache
+node_modules
+package-lock.json
+.idea/
+yarn.lock
+default.nix
+node-env.nix
+node-packages.nix

@@ -1,0 +1,28 @@
+# Site settings
+title: David Dudson
+description: A blog and cv site
+base_url: ""
+url: daviddudson.github.io
+
+# User settings
+username: David Dudson
+
+user_title: Software Developer
+email: davidjohndudson@gmail.com
+twitter_username: bigdavenz1
+github_username:  daviddudson
+linkedin:  daviddudson
+phone: +64 27 869 0606
+src: https://github.com/DavidDudson/daviddudson.github.io/tree/develop
+pdf: /assets/pdf/DavidDudsonCV.pdf
+
+google-analytics:
+  id: 'UA-42525615-1'
+
+exclude: [
+  'package.json',
+  'package-lock.json',
+  'gulpfile.js',
+  '*.txt',
+  'src',
+  'node_modules']

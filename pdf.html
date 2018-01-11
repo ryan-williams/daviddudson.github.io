@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>David Dudson</title>
+    <meta name="description" content="A blog and cv site">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link rel="stylesheet" href="./assets/css/pdf.css">
+</head>
+
+    <body>
+        <div class="header" id="head">
+    <h1>
+        <span class="site-title">David Dudson</span>
+        <span class="site-description">Software Developer</span>
+    </h1>
+    <br/>
+    <a class="link" aria-label="Send email" href="mailto:davidjohndudson@gmail.com">davidjohndudson@gmail.com</a>
+    <br/>
+    <div>
+        +64 27 869 0606
+    </div>
+    <br/>
+    <h4> Available to work remotely or in Cairns, Australia from 19th Feb 2018
+ </h4>
+    <br/>
+</div>
+        <br>
+<section id="" class="section container">
+    <div class="page">
+        <h3 id="about">About me</h3>
+        <p> I am a cross-paradigm, performance driven, Scala/Java Software Developer who specializes in meta-programming. With a passion for learning new languages and paradigms I can adapt to any team. I'm becoming increasingly aware of I am currently working on a language backend for Process Systems Enterprise, London, remotely from Palmerston North, New Zealand, as well as working in the scalameta ecosystem in my own time for open source.
+ </p>
+
+        <hr/>
+        <h3 id="opensource">Open Source</h3>
+        <div class="opensource">
+    <p>I have a passion for writing code, especially when it is consumed by a large number of users. I'm always looking for more ways to help out the open source community, either on Gitter or via PR's. Ideally I would like to work completely open source and believe that all companies should open source all their libraries where it is appropriate.
+</p>
+
+    <div class="standard_flex">
+        
+        <div class="standard_flex_item centered">
+            <a class="link" href="https://github.com/scalameta/scalagen"><h5><i class="icon fa fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;scalagen</h5>            </a>
+            <p><b>Author</b></p>
+            <p>WIP code generation library for Scala. Built on scalameta, scalagen supports any scalameta dialect, Scala Native/ScalaJs/Dotty/Scala 2.10 to 2.12.4 are all supported. scalagen can completely replace all scalameta/paradise annotation macros, and *most* scalamacros/paradise annotations.
+</p>
+        </div>
+        
+        <div class="standard_flex_item centered">
+            <a class="link" href="https://github.com/scalameta/scalameta"><h5><i class="icon fa fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;scalameta</h5>            </a>
+            <p><b>Maintainer</b></p>
+            <p>Meta-programming library for Scala. Built with the idea that Scala's language tree's should be easy to manipulate. This library is a centerpoint for most recent developements with Scala's tooling.
+</p>
+        </div>
+        
+        <div class="standard_flex_item centered">
+            <a class="link" href="https://github.com/scalameta/paradise"><h5><i class="icon fa fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;scalameta paradise</h5>            </a>
+            <p><b>Maintainer</b></p>
+            <p>Macro library for Scala. Now deprecated in favor of scalameta/scalagen (Annotation Macros) and scalacenter/macros (Def Macros)
+</p>
+        </div>
+        
+        <div class="standard_flex_item centered">
+            <a class="link" href="https://github.com/DavidDudson/Elysium"><h5><i class="icon fa fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;Elysium</h5>            </a>
+            <p><b>Author</b></p>
+            <p>A collection of macros for scalameta/paradise. On hold until scalagen goes 0.1, then the entire API will be converted.
+</p>
+        </div>
+        
+    </div>
+</div>
+    </div>
+    <div class="page">
+        <h3 id="employer">Employment</h3>
+        <div>
+    <p><b>Company: </b>Electric Memory IT (EMIT)<br>
+        <b>Contracted To: </b>Process Systems Enterprise (PSE)<br>
+        <b>Time Employed: </b>June 2015 - Present</p>
+
+    <p>Based in Palmerston North, New Zealand, Contracting out to Process Systems Enterprise, which is based in London.
+
+        <br>
+        <br>
+        I am working on the gPROMS family of integrated modelling environments (IME's), designed for various engineers who design incredibly complex systems. The kernel is written in C++ and Fortran, with the UI written in Java. gPROMS is primarily a procedural/declarative language that is used to run simulations/optimizations etc. Thus the IME's act much like an IDE would for a Software Developer. With large global clients such as Eli Lilly Pharmaceuticals and Shell Petroleum I take the quality of code I produce very seriously.
+</p>
+
+    <h4>Projects</h4>
+
+    <div class="standard_flex">
+        
+        <div class="standard_flex_item">
+            <h5>New Language Engine (NLE)</h5>
+            <p>The purpose of this project was primarily to remove a large chunk of the remaining CORBA code in our codebase. Using Antlr4 as our parser and lexer, with Scala as the language of choice, we managed to build an fast, immutable, threadsafe and storage efficient language module.
+</p>
+        </div>
+        
+        <div class="standard_flex_item">
+            <h5>Moving from Maven to Gradle</h5>
+            <p>Our build system is rather complex, we have multiple "code generation" steps, multiple JVM languages being used, extra post-compile tasks (obfuscation and encryption) and multiple repositories. The build was designed to be modular via Gradle plugins.
+</p>
+        </div>
+        
+        <div class="standard_flex_item">
+            <h5>Flowsheet Routing</h5>
+            <p>Our users were generating models in other applications, with 2000+ models and connections between them. The routing took place on Swings GUI Thread (EDT) and thus blocked the user from working while it happened. For user-generated projects this could happen on project load and trigger up to 8 hour GUI freezes. Of course, this is not acceptable, thus I moved all routing off the EDT. The largest problem was undo. We had asynchronous edits that had to be managed within Swings very synchronous and sequential undo system.
+</p>
+        </div>
+        
+    </div>
+</div>
+        <hr/>
+        <div>
+    <h3>Past Employment</h3>
+
+    <div class="standard_flex">
+        
+        <div class="centered standard_flex_item">
+            <h5>Dick Smith Electronics</h5>
+            <p><b>Role: </b>Salesman<br>
+                <b>Time Employed: </b>2014 - 2015</p>
+        </div>
+        
+        <div class="centered standard_flex_item">
+            <h5>Countdown Supermarkets</h5>
+            <p><b>Role: </b>Butchers Assistant/Checkout Operator<br>
+                <b>Time Employed: </b>2009 - 2013</p>
+        </div>
+        
+        <div class="centered standard_flex_item">
+            <h5>Paradise Valley Berry Farm</h5>
+            <p><b>Role: </b>Raspberry Harvester<br>
+                <b>Time Employed: </b>2008</p>
+        </div>
+        
+    </div>
+</div>
+        <hr/>
+        <h3 id="tech">Technical</h3>
+        <div class="tech">
+    <h5>Operating System</h5>
+    <p>I prefer Unix based systems for general development, usually one of NixOS, Ubuntu, Fedora or OSX.
+</p>
+
+    <h5>Version Control</h5>
+    <p>I exclusively use git for version control. I am very competent with git and have written a number of internal scripts for it.
+</p>
+
+    <h5>Languages, Libraries and Skills</h5>
+    <dl class="standard_flex">
+        
+        <div class="standard_flex_item">
+            <dt>Scala</dt>
+            <dd>I have been writing Scala code since 2012, working with it in industry for the past 2 years. I consider myself an advanced Scala user and have given talks on Scala before. Most of my open source work has been creating and/or contributing to Scala libraries. I've a large number of Scala libraries, but most commonly Cats, Monix, Circe and Scalameta.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Java</dt>
+            <dd>Java was the first language I learnt. Self taught while I was at high school I have been writing Java code since 2011. A large portion of the codebase I work in is Java and I consider myself an advanced Java user.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Python</dt>
+            <dd>I use Python mostly for scripting and web scraping. I've attended multiple Kiwi Pycons and always enjoyed the friendliness of the Python community.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Javascript</dt>
+            <dd>I've written a lot of javascript, mostly during my time at university, I have experience ES5, ES6, Typescript and Coffeescript. I've also written code in AngularJS, Angular and React, using tools such as NPM, Bower, Gulp and Webkit.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Antlr 4</dt>
+            <dd>A large portion of my work recently has been writing ANTLR4 Grammars, a Scala AST to go with them and ensuring performance has been optimal. Due to this, I've subclassed and replaced large portions of the ANTLR code as it was non-optimal, generating far too much garbage for our uses.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Ansible</dt>
+            <dd>I have written multiple sets of Ansible scripts, for provisioning build machines and setting up dev environments.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Gradle</dt>
+            <dd>Due to being in charge of the Maven => Gradle porting of our build system at work, I have become a competent Gradle/Groovy developer.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Category theory</dt>
+            <dd>Last year I taught myself basic category theory. I wanted to get a ground up understanding of category theory so that when working with the Cats library, I could understand the reasoning and terminology. In particular, I wanted to develop an understanding the Free Monads and Natural Transformations. I still want to do far more research into this field and personally believe it should be part of every Computer Science curriculum globally.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>Functional Programming</dt>
+            <dd>I believe that Functional Programming is a far too common of a phrase these days, when a lot of people mean "programming with functions". Functional programming is not just about having functions representable at the type level. I use purely immutable data structures and try to be as pure as possible, handling effects at the type level, where it does not affect Readability, Maintainability or Performance. I can proudly say that I have not deliberately used the keyword "null" in my code, for well over a year.
+</dd>
+        </div>
+        
+    </dl>
+
+    <h5>IDE's and Editors</h5>
+    <dl class="standard_flex">
+    
+        <div class="standard_flex_item">
+            <dt>IntelliJ IDEA</dt>
+            <dd>I use IntelliJ every day for most development. For Java specifically, I struggle to see a reason to use anything else.
+</dd>
+        </div>
+    
+        <div class="standard_flex_item">
+            <dt>Webstorm</dt>
+            <dd>Go to for Web development, although I do not feel an IDE is anywhere near as useful for web dev as it is for Java dev, I occasionally use a text editor instead.
+</dd>
+        </div>
+    
+        <div class="standard_flex_item">
+            <dt>Atom</dt>
+            <dd>My usual text editor, I use it quite a bit for web development as well.
+</dd>
+        </div>
+    
+        <div class="standard_flex_item">
+            <dt>Gedit</dt>
+            <dd>I use Gedit for Git related work. Atom starts too slow and I have not yet spent enough time with Vim to use that.
+</dd>
+        </div>
+    
+    </dl>
+
+    <h5>Profilers</h5>
+    <dl class="standard_flex">
+        
+        <div class="standard_flex_item">
+            <dt>Yourkit</dt>
+            <dd>I would recommend Yourkit to anyone, Yourkit makes optimizing code a breeze.
+</dd>
+        </div>
+        
+        <div class="standard_flex_item">
+            <dt>VisualVM</dt>
+            <dd>I stopped using VisualVM after we purchased Yourkit. Yourkit really is far superior here.</dd>
+        </div>
+        
+    </dl>
+    <br>
+</div>
+        <hr/>
+        <div>
+    <h3>Conferences</h3>
+
+    <p>Attending as many conferences as possible I enjoy networking and learning how the industry is evolving. I have been to multiple conferences including Kiwi Pycon, Kiwicon X and NZJSCon. One of my highlights was presenting a lightning talk on GitPython at Kiwi Pycon, Dunedin. I will be attending Linux Conference Australia in Sydney at the end of January 2018.
+</p>
+</div>
+        <hr/>
+        <div>
+    <h3>Community</h3>
+    <p>I attend as many talks and events as possible, via Massey University, IT Professionals of New Zealand (ITPNZ) or the Palmerston North Software Development Meetup Group. Once I have arrived in Cairns I will be joining IT Professionals Australia. I have also given a talk and workshop for Scala to around 30 people at the meetup group.</p>
+</div>
+        <hr/>
+        <div class="education">
+    <h3>Education</h3>
+
+    <div class="standard_flex">
+        
+        <div class="standard_flex_item centered">
+            <h5>Massey University</h5>
+            
+            <p><b>Qualification: </b>Bachelor of Information Science. Computer Science Major</p>
+            
+            
+            <p><b>Status: </b>Compulsories complete in 2015</p>
+            
+            
+            <p>Started working fulltime before completion currently finishing electives via part-time study.</p>
+            
+        </div>
+        
+        <div class="standard_flex_item centered">
+            <h5>New Plymouth Boys' High School (NPBHS)</h5>
+            
+            <p><b>Qualification: </b>NCEA level 3</p>
+            
+            
+            <p><b>Status: </b>Complete in 2011</p>
+            
+            
+        </div>
+        
+    </div>
+</div>
+    </div>
+    <div class="page">
+        <h3 id="refs">References</h3>
+        <p>Personal phone numbers of references available on request.
+</p>
+
+<div class="standard_flex">
+
+    <div class="standard_flex_item">
+        <h5>Duane Griffin</h5>
+        <p>
+            <b>Relationship:</b> Cofounder of Electric Memory IT <br>
+            <b>Location:</b> Palmerston North, New Zealand <br>
+            <b>Timezone:</b> New Zealand Standard Time (NZST - UTC+13) <br>
+            <b>Email:</b> duaneg@psenterprise.com <br>
+            <b>Phone:</b> ???</p>
+        <p>Duane is my current boss. He has worked for PSE for 14+ years. Currently heads on the NLE project. Ask Duane any technical questions about my Scala knowledge and/or involvement in NLE.</p>
+    </div>
+
+    <div class="standard_flex_item">
+        <h5>Luke Usherwood</h5>
+        <p>
+            <b>Relationship:</b> Cofounder of Electric Memory IT <br>
+            <b>Location:</b> Hungary <br>
+            <b>Timezone:</b> Central European Time (CET - UTC+1) <br>
+            <b>Email:</b> lukeu@psenterprise.com <br>
+            <b>Phone:</b> ???</p>
+        <p>Luke worked for a short time in New Zealand when I first started. He has since moved back to Hungary. Ask Luke any technical questions about the flowsheeting work I have done. He also has worked on NLE and I send a lot of code reviews his way.</p>
+    </div>
+
+    <div class="standard_flex_item">
+        <h5>Andrew Bevan</h5>
+        <p>
+            <b>Relationship:</b> Head of Software Development, Process Systems Enterprise <br>
+            <b>Location:</b> London, England <br>
+            <b>Timezone:</b> Greenwich Mean Time (GMT - UTC+0) <br>
+            <b>Email:</b> andrewb@psenterprise.com <br>
+            <b>Phone:</b> +44 20 8563 0888</p>
+        <p>Andrew is the Head of Software Development. If you wish to know any non-technical information about how I have worked with PSE and how well I work remotely, feel free to ask him.</p>
+    </div>
+
+    <div class="standard_flex_item">
+        <h5>Steven Carpenter</h5>
+        <p>
+            <b>Relationship:</b> Ex Manager of Dick Smith Palmerston North <br>
+            <b>Location:</b> Palmerston North, New Zealand <br>
+            <b>Timezone:</b> New Zealand Standard Time (NZST - UTC+13) <br>
+            <b>Email:</b>  <br>
+            <b>Phone:</b> ???</p>
+        <p>Steven (Steve) was my boss at Dick Smith before I started working as a Software Developer. If you would like to know anything about my retail experience, including customer interactions, feel free to ask Steve.</p>
+    </div>
+
+</div>
+    </div>
+</section>
+
+        <footer class="footer centered">
+    <br>
+    <p>&copy; David Dudson
+    <br>Built in the open by <a href="http://daviddudson.github.io">David Dudson</a> on <a href="/home/travis/build/DavidDudson/daviddudson.github.io">Github</p>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<!-- Google Analytics -->
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-42525615-1', 'auto', 'github_pages');
+ga('send', 'pageview');
+</script>
+
+
+
+    </body>
+</html>
